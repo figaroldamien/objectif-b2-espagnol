@@ -6,31 +6,31 @@ import { breadcrumbSchema } from "@/lib/schema";
 ---
 
 <BaseLayout
-  title="Methode | Objectif B2 Espagnol"
-  description="La methode structuree d Objectif B2 Espagnol pour faire progresser les candidats vers une certification B2/C1."
+  title="Méthode | Objectif B2 Espagnol"
+  description="La méthode structurée d'Objectif B2 Espagnol pour faire progresser les candidats vers une certification B2/C1."
   pathname="/methode"
   schema={breadcrumbSchema([
-    { name: "Accueil", url: "https://www.objectifb2espagnol.fr/" },
-    { name: "Methode", url: "https://www.objectifb2espagnol.fr/methode" }
+    { name: "Accueil", url: "https://www.objectif-b2-espagnol.fr/" },
+    { name: "Méthode", url: "https://www.objectif-b2-espagnol.fr/methode" }
   ])}
 >
   <section class="section-gap">
     <div class="container-shell">
-      <Breadcrumbs items={[{ label: "Methode", href: "/methode" }]} />
+      <Breadcrumbs items={[{ label: "Méthode", href: "/methode" }]} />
       <div class="space-y-5">
-        <p class="eyebrow">Methode</p>
-        <h1 class="text-5xl">Une preparation plus claire, parce qu elle est structuree</h1>
+        <p class="eyebrow">Méthode</p>
+        <h1 class="text-5xl">Une préparation plus claire, parce qu’elle est structurée</h1>
         <p class="max-w-3xl text-lg leading-8 text-ink/75">
-          La methode vise a retirer le flou: comprendre l objectif, prioriser, entrainer les competences utiles et simuler avant l examen.
+          La méthode vise à retirer le flou : comprendre l’objectif, prioriser, entraîner les compétences utiles et simuler avant l’examen.
         </p>
       </div>
 
       <div class="mt-10 grid gap-6 lg:grid-cols-2">
         {[
-          ["Clarifier", "On part d un diagnostic simple pour savoir ou vous en etes et ce qui compte pour votre objectif."],
-          ["Simplifier", "Les notions et exigences sont expliquees avec une logique facile a retenir et a reutiliser."],
-          ["Prioriser", "Chaque seance sert une progression. Vous savez quoi faire, pourquoi et dans quel ordre."],
-          ["Mesurer", "Des simulations et corrections detaillees permettent d objectiver les progres et d ajuster."]
+          ["Clarifier", "On part d’un diagnostic simple pour savoir où vous en êtes et ce qui compte pour votre objectif."],
+          ["Simplifier", "Les notions et exigences sont expliquées avec une logique facile à retenir et à réutiliser."],
+          ["Prioriser", "Chaque séance sert une progression. Vous savez quoi faire, pourquoi et dans quel ordre."],
+          ["Mesurer", "Des simulations et corrections détaillées permettent d’objectiver les progrès et d’ajuster."]
         ].map(([title, text]) => (
           <div class="surface-card p-8">
             <h2 class="text-3xl">{title}</h2>

@@ -1,37 +1,38 @@
 export const siteConfig = {
   name: "Objectif B2 Espagnol",
-  siteUrl: "https://www.objectifb2espagnol.fr",
-  defaultTitle: "Objectif B2 Espagnol | Methode structuree pour reussir votre certification",
+  siteUrl: "https://www.objectif-b2-espagnol.fr",
+  defaultTitle: "Objectif B2 Espagnol | Méthode structurée pour réussir votre certification",
   defaultDescription:
-    "La methode structuree pour atteindre le niveau B2/C1 en espagnol, reussir votre certification et reserver un diagnostic personnalise.",
+    "La méthode structurée pour atteindre le niveau B2/C1 en espagnol, réussir votre certification et réserver un diagnostic personnalisé.",
   author: "Objectif B2 Espagnol",
-  email: "bonjour@objectifb2espagnol.fr",
-  calendlyUrl: "https://calendly.com/objectifb2espagnol/diagnostic",
+  email: "contact@objectif-b2-espagnol.fr",
   leadMagnetLandingPath: "/ressources/guide-b2",
   leadMagnetPdfPath: "/pdf/guide%20B2%20espagnol.pdf",
-  newsletterFormAction: "https://formsubmit.co/bonjour@objectifb2espagnol.fr",
+  newsletterFormAction: "https://formsubmit.co/contact@objectif-b2-espagnol.fr",
+  contactFormAction: "https://formsubmit.co/contact@objectif-b2-espagnol.fr",
   leadMagnetThankYouPath: "/merci/guide-b2",
+  contactThankYouPath: "/merci/contact",
   social: {
     linkedin: "https://www.linkedin.com",
     instagram: "https://www.instagram.com"
   },
   navigation: [
-    { label: "Offre", href: "/cours/espagnol-certification" },
-    { label: "Methode", href: "/methode" },
+    { label: "Préparation B2/C1", href: "/cours/espagnol-certification" },
+    { label: "Méthode", href: "/methode" },
     { label: "Blog", href: "/blog" },
-    { label: "Temoignages", href: "/temoignages" },
-    { label: "A propos", href: "/a-propos" },
+    { label: "Témoignages", href: "/temoignages" },
+    { label: "À propos", href: "/a-propos" },
     { label: "Contact", href: "/contact" }
   ]
 } as const;
 
 export const primaryCtas = {
   diagnostic: {
-    label: "Reserver un diagnostic",
+    label: "Réserver un diagnostic",
     href: "/contact"
   },
   guide: {
-    label: "Telecharger le guide gratuit",
+    label: "Télécharger le guide gratuit",
     href: siteConfig.leadMagnetLandingPath
   }
 } as const;

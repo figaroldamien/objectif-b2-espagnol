@@ -4,7 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 
 export default defineConfig({
-  site: "https://www.objectifb2espagnol.fr",
+  site: "https://www.objectif-b2-espagnol.fr",
   integrations: [tailwind(), sitemap(), mdx()],
   markdown: {
     shikiConfig: {

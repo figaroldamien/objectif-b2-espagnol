@@ -22,7 +22,7 @@ export function personSchema() {
       name: siteConfig.name
     },
     description:
-      "Ancienne professeure de mathematiques au Chili, specialisee dans la preparation structuree aux certifications d'espagnol B2/C1."
+      "Ancienne professeure de mathématiques au Chili, spécialisée dans la préparation structurée aux certifications d'espagnol B2/C1."
   };
 }
 

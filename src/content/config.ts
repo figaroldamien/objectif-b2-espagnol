@@ -10,7 +10,7 @@ const blog = defineCollection({
     updatedDate: z.coerce.date().optional(),
     category: z.enum([
       "Certification",
-      "Methode et progression",
+      "Méthode et progression",
       "Oral et production",
       "Grammaire utile",
       "Voyage"

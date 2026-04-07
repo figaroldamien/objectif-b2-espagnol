@@ -12,11 +12,11 @@ const posts = sortBlogPosts(await getCollection("blog", ({ data }) => !data.draf
 
 <BaseLayout
   title="Blog espagnol B2/C1 | Objectif B2 Espagnol"
-  description="Articles SEO pour reussir votre certification d espagnol, structurer votre progression et mieux preparer l oral comme l ecrit."
+  description="Articles pour réussir votre certification d'espagnol, structurer votre progression et mieux préparer l'oral comme l'écrit."
   pathname="/blog"
   schema={breadcrumbSchema([
-    { name: "Accueil", url: "https://www.objectifb2espagnol.fr/" },
-    { name: "Blog", url: "https://www.objectifb2espagnol.fr/blog" }
+    { name: "Accueil", url: "https://www.objectif-b2-espagnol.fr/" },
+    { name: "Blog", url: "https://www.objectif-b2-espagnol.fr/blog" }
   ])}
 >
   <section class="section-gap">
@@ -27,7 +27,7 @@ const posts = sortBlogPosts(await getCollection("blog", ({ data }) => !data.draf
           <p class="eyebrow">Blog</p>
           <h1 class="text-5xl">Le blog pour structurer votre progression vers le B2/C1</h1>
           <p class="max-w-3xl text-lg leading-8 text-ink/75">
-            Des articles centres sur la certification, la methode, l oral, la grammaire utile et les vraies priorites de progression.
+            Des articles centrés sur la certification, la méthode, l’oral, la grammaire utile et les vraies priorités de progression.
           </p>
         </div>
         <NewsletterForm compact={true} />

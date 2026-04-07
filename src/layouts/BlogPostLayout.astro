@@ -13,16 +13,16 @@ type Props = {
 const { post } = Astro.props;
 const schema = [
   breadcrumbSchema([
-    { name: "Accueil", url: "https://www.objectifb2espagnol.fr/" },
-    { name: "Blog", url: "https://www.objectifb2espagnol.fr/blog" },
-    { name: post.data.title, url: `https://www.objectifb2espagnol.fr/blog/${post.slug}` }
+    { name: "Accueil", url: "https://www.objectif-b2-espagnol.fr/" },
+    { name: "Blog", url: "https://www.objectif-b2-espagnol.fr/blog" },
+    { name: post.data.title, url: `https://www.objectif-b2-espagnol.fr/blog/${post.slug}` }
   ]),
   articleSchema({
     title: post.data.seoTitle ?? post.data.title,
     description: post.data.seoDescription ?? post.data.description,
     publishedTime: post.data.publishDate.toISOString(),
     updatedTime: post.data.updatedDate?.toISOString(),
-    image: post.data.heroImage ? `https://www.objectifb2espagnol.fr${post.data.heroImage}` : undefined,
+    image: post.data.heroImage ? `https://www.objectif-b2-espagnol.fr${post.data.heroImage}` : undefined,
     pathname: `/blog/${post.slug}`
   })
 ];
@@ -45,8 +45,8 @@ const schema = [
         <h1 class="text-4xl sm:text-5xl">{post.data.title}</h1>
         <p class="max-w-3xl text-lg leading-8 text-ink/75">{post.data.description}</p>
         <div class="flex flex-wrap gap-3 text-sm text-ink/55">
-          <span>Publie le {formatDate(post.data.publishDate)}</span>
-          {post.data.updatedDate && <span>Mis a jour le {formatDate(post.data.updatedDate)}</span>}
+          <span>Publié le {formatDate(post.data.publishDate)}</span>
+          {post.data.updatedDate && <span>Mis à jour le {formatDate(post.data.updatedDate)}</span>}
         </div>
       </header>
 

@@ -21,8 +21,8 @@ const testimonials = sortTestimonials(
 
 const schema = [
   breadcrumbSchema([
-    { name: "Accueil", url: "https://www.objectifb2espagnol.fr/" },
-    { name: "Cours certification", url: "https://www.objectifb2espagnol.fr/cours/espagnol-certification" }
+    { name: "Accueil", url: "https://www.objectif-b2-espagnol.fr/" },
+    { name: "Préparation B2/C1", url: "https://www.objectif-b2-espagnol.fr/cours/espagnol-certification" }
   ]),
   faqSchema(faqs)
 ];
@@ -30,34 +30,34 @@ const schema = [
 
 <BaseLayout
   title="Cours espagnol certification B2/C1 | Objectif B2 Espagnol"
-  description="Programme premium pour preparer une certification d espagnol B2/C1 avec methode structuree, diagnostic et simulations."
+  description="Programme premium pour préparer une certification d’espagnol B2/C1 avec méthode structurée, diagnostic et simulations."
   pathname="/cours/espagnol-certification"
   schema={schema}
 >
   <section class="section-gap">
     <div class="container-shell">
-      <Breadcrumbs items={[{ label: "Cours certification", href: "/cours/espagnol-certification" }]} />
+      <Breadcrumbs items={[{ label: "Préparation B2/C1", href: "/cours/espagnol-certification" }]} />
 
       <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
         <div class="space-y-6">
-          <p class="eyebrow">Offre phare</p>
-          <h1 class="text-5xl">Programme Objectif B2 en 8 a 12 semaines</h1>
+          <p class="eyebrow">Préparation B2/C1</p>
+          <h1 class="text-5xl">Programme Objectif B2 en 8 à 12 semaines</h1>
           <p class="max-w-3xl text-xl leading-8 text-ink/75">
-            Pour les etudiants et jeunes adultes qui doivent valider un niveau B2/C1, avec une methode claire, rassurante et orientee resultats.
+            Pour les étudiants et jeunes adultes qui doivent valider un niveau B2/C1, avec une méthode claire, rassurante et orientée résultats.
           </p>
           <div class="flex flex-col gap-3 sm:flex-row">
-            <a href="/contact" class="btn-primary">Reserver un diagnostic</a>
-            <a href="/ressources/guide-b2" class="btn-secondary">Telecharger le guide gratuit</a>
+            <a href="/contact" class="btn-primary">Réserver un diagnostic</a>
+            <a href="/ressources/guide-b2" class="btn-secondary">Télécharger le guide gratuit</a>
           </div>
         </div>
 
         <div class="surface-card p-8">
           <p class="text-sm uppercase tracking-[0.18em] text-ink/45">Ce que vous cherchez probablement</p>
           <ul class="mt-5 space-y-4 leading-7 text-ink/75">
-            <li>Un plan clair plutot qu une accumulation d exercices sans fil conducteur.</li>
+            <li>Un plan clair plutôt qu’une accumulation d’exercices sans fil conducteur.</li>
             <li>Un accompagnement pour savoir quoi travailler avant votre date limite.</li>
-            <li>Des retours concrets sur l oral, l ecrit et les criteres de correction.</li>
-            <li>Une preparation qui rassure et fait gagner du temps.</li>
+            <li>Des retours concrets sur l’oral, l’écrit et les critères de correction.</li>
+            <li>Une préparation qui rassure et fait gagner du temps.</li>
           </ul>
         </div>
       </div>
@@ -67,9 +67,9 @@ const schema = [
   <section class="section-gap pt-4">
     <div class="container-shell grid gap-6 md:grid-cols-3">
       {[
-        ["Le probleme", "Vous avez une echeance et vous sentez que votre travail n est pas assez structure pour securiser le resultat."],
-        ["Pour qui", "Etudiants visant un DELE, un test d admission ou une validation de niveau pour partir etudier a l etranger."],
-        ["Resultat attendu", "Savoir exactement quoi faire chaque semaine et arriver a l examen avec un cadre clair."]
+        ["Le problème", "Vous avez une échéance et vous sentez que votre travail n’est pas assez structuré pour sécuriser le résultat."],
+        ["Pour qui", "Étudiants visant un DELE, un test d’admission ou une validation de niveau pour partir étudier à l’étranger."],
+        ["Résultat attendu", "Savoir exactement quoi faire chaque semaine et arriver à l’examen avec un cadre clair."]
       ].map(([title, text]) => (
         <div class="surface-card p-7">
           <h2 class="text-2xl">{title}</h2>
@@ -82,15 +82,15 @@ const schema = [
   <section class="section-gap">
     <div class="container-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
       <div class="space-y-3">
-        <p class="eyebrow">Resultats attendus</p>
-        <h2 class="text-4xl">Vous avancez avec des priorites nettes</h2>
+        <p class="eyebrow">Résultats attendus</p>
+        <h2 class="text-4xl">Vous avancez avec des priorités nettes</h2>
       </div>
       <div class="grid gap-4">
         {[
-          "Comprendre la structure de l examen et les criteres qui comptent.",
-          "Renforcer l oral et l ecrit avec des exercices utiles plutot que disperses.",
-          "Corriger les faiblesses recurrentes qui bloquent le passage de B1 a B2.",
-          "Gagner en confiance avec des simulations et du feedback precis."
+          "Comprendre la structure de l’examen et les critères qui comptent.",
+          "Renforcer l’oral et l’écrit avec des exercices utiles plutôt que dispersés.",
+          "Corriger les faiblesses récurrentes qui bloquent le passage de B1 à B2.",
+          "Gagner en confiance avec des simulations et du feedback précis."
         ].map((item) => (
           <div class="surface-card p-6"><p class="leading-7 text-ink/75">{item}</p></div>
         ))}
@@ -101,15 +101,15 @@ const schema = [
   <section class="section-gap bg-white/40">
     <div class="container-shell">
       <div class="mb-8 space-y-3">
-        <p class="eyebrow">Methode</p>
-        <h2 class="text-4xl">Comment se deroule l accompagnement</h2>
+        <p class="eyebrow">Méthode</p>
+        <h2 class="text-4xl">Comment se déroule l’accompagnement</h2>
       </div>
       <div class="grid gap-5 lg:grid-cols-4">
         {[
-          ["Diagnostic initial", "Evaluation du niveau, de l objectif et de l echeance."],
-          ["Plan personnalise", "Priorites claires, charge de travail adaptee et feuille de route."],
-          ["Preparation ciblee", "Oral, ecrit, comprehension et structures utiles travailles chaque semaine."],
-          ["Simulation et ajustements", "Corrections detaillees pour consolider avant l examen."]
+          ["Diagnostic initial", "Évaluation du niveau, de l’objectif et de l’échéance."],
+          ["Plan personnalisé", "Priorités claires, charge de travail adaptée et feuille de route."],
+          ["Préparation ciblée", "Oral, écrit, compréhension et structures utiles travaillés chaque semaine."],
+          ["Simulation et ajustements", "Corrections détaillées pour consolider avant l’examen."]
         ].map(([title, text]) => (
           <div class="surface-card p-6">
             <h3 class="text-2xl">{title}</h3>
@@ -129,11 +129,11 @@ const schema = [
       <div class="surface-card p-8">
         <ul class="grid gap-4 leading-7 text-ink/75 sm:grid-cols-2">
           <li>Diagnostic individuel</li>
-          <li>Plan de travail personnalise</li>
+          <li>Plan de travail personnalisé</li>
           <li>Cours individuels ou petit groupe</li>
-          <li>Preparation de l oral et de l ecrit</li>
-          <li>Simulations d examen</li>
-          <li>Suivi et feedback precis</li>
+          <li>Préparation de l’oral et de l’écrit</li>
+          <li>Simulations d’examen</li>
+          <li>Suivi et feedback précis</li>
         </ul>
       </div>
     </div>
@@ -143,7 +143,7 @@ const schema = [
     <div class="container-shell">
       <div class="mb-8 space-y-3">
         <p class="eyebrow">Preuve sociale</p>
-        <h2 class="text-4xl">90% de reussite et des retours tres concrets</h2>
+        <h2 class="text-4xl">90% de réussite et des retours très concrets</h2>
       </div>
       <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {testimonials.map((entry) => <TestimonialCard {...entry.data} />)}
@@ -155,7 +155,7 @@ const schema = [
     <div class="container-shell">
       <div class="mb-8 space-y-3">
         <p class="eyebrow">FAQ</p>
-        <h2 class="text-4xl">Questions frequentes sur la preparation certification</h2>
+        <h2 class="text-4xl">Questions fréquentes sur la préparation certification</h2>
       </div>
       <FAQList items={faqs} />
     </div>

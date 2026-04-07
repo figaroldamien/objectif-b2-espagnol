@@ -1,6 +1,6 @@
 ---
-question: En combien de temps peut-on preparer une certification B2 ?
-answer: Cela depend du niveau de depart, de l intensite du travail et de l echeance. Le programme est pense pour structurer une preparation sur 8 a 12 semaines, mais le vrai point cle est la clarte du plan.
+question: En combien de temps peut-on préparer une certification B2 ?
+answer: Cela dépend du niveau de départ, de l'intensité du travail et de l'échéance. Le programme est pensé pour structurer une préparation sur 8 a 12 semaines, mais le vrai point clé est la clarté du plan.
 category: certification
 order: 1
 ---

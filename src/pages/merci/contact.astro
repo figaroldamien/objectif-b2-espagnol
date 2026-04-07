@@ -1,0 +1,35 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { siteConfig } from "@/lib/site";
+---
+
+<BaseLayout
+  title="Merci | Contact"
+  description="Votre message a bien été envoyé. Objectif B2 Espagnol vous répondra par email."
+  pathname="/merci/contact"
+  noindex={true}
+>
+  <section class="section-gap">
+    <div class="container-shell max-w-3xl">
+      <div class="surface-card p-8 sm:p-12">
+        <p class="eyebrow">Message envoyé</p>
+        <h1 class="mt-3 text-4xl">Merci, votre message est bien parti</h1>
+        <p class="mt-4 max-w-2xl text-lg leading-8 text-ink/75">
+          Je vous répondrai par email dès que possible. En attendant, vous pouvez télécharger le guide gratuit ou écrire directement à
+          <a href={`mailto:${siteConfig.email}`} class="ml-1 font-semibold text-accent">{siteConfig.email}</a>.
+        </p>
+        <p class="mt-3 text-sm leading-7 text-ink/60">
+          Réponse habituelle sous 24 à 48h ouvrées.
+        </p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <a href={siteConfig.leadMagnetLandingPath} class="btn-primary">
+            Télécharger le guide gratuit
+          </a>
+          <a href="/" class="btn-secondary">
+            Retour à l’accueil
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

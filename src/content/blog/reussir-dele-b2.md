@@ -1,45 +1,45 @@
 ---
-title: Reussir le DELE B2 avec une methode claire
-description: Comment preparer le DELE B2 sans vous disperser, avec une progression structuree et des priorites concretes.
-excerpt: Une approche simple pour comprendre l examen, prioriser le travail et arriver plus sereinement au DELE B2.
+title: Réussir le DELE B2 avec une méthode claire
+description: Comment préparer le DELE B2 sans vous disperser, avec une progression structurée et des priorités concrètes.
+excerpt: Une approche simple pour comprendre l’examen, prioriser le travail et arriver plus sereinement au DELE B2.
 publishDate: 2026-03-01
 updatedDate: 2026-03-20
 category: Certification
 tags:
   - dele b2
   - certification espagnol
-  - preparation examen
+  - préparation examen
 draft: false
 featured: true
-seoTitle: Reussir le DELE B2 | Methode simple et structuree
-seoDescription: Decouvrez une methode structuree pour preparer le DELE B2, avec les bonnes priorites et un plan de progression clair.
+seoTitle: Réussir le DELE B2 | Méthode simple et structurée
+seoDescription: Découvrez une méthode structurée pour préparer le DELE B2, avec les bonnes priorités et un plan de progression clair.
 faq:
   - Quel niveau faut-il pour viser le DELE B2 ?
 ctaVariant: diagnostic
 heroImage: /images/blog/reussir-dele-b2.svg
 ---
 
-Le DELE B2 peut sembler impressionnant, surtout quand on a une date et peu de visibilite sur ce qu il faut vraiment travailler. Le probleme n est pas toujours le volume de travail. C est souvent le manque de methode.
+Le DELE B2 peut sembler impressionnant, surtout quand on a une date et peu de visibilité sur ce qu’il faut vraiment travailler. Le problème n’est pas toujours le volume de travail. C’est souvent le manque de méthode.
 
 ## Ce qui bloque le plus souvent
 
-Beaucoup de candidats alternent entre grammaire, vocabulaire, videos et annales sans logique d ensemble. Ils ont l impression de travailler, mais peinent a mesurer leurs progres.
+Beaucoup de candidats alternent entre grammaire, vocabulaire, vidéos et annales sans logique d’ensemble. Ils ont l’impression de travailler, mais peinent à mesurer leurs progrès.
 
-## La bonne logique de preparation
+## La bonne logique de préparation
 
-Une preparation utile suit generalement cet ordre :
+Une préparation utile suit généralement cet ordre :
 
-1. comprendre la structure de l examen ;
-2. identifier les competences les plus fragiles ;
-3. entrainer l oral et l ecrit sur des formats proches du jour J ;
-4. corriger avec des criteres clairs.
+1. comprendre la structure de l’examen ;
+2. identifier les compétences les plus fragiles ;
+3. entraîner l’oral et l’écrit sur des formats proches du jour J ;
+4. corriger avec des critères clairs.
 
-## Pourquoi une methode structuree change tout
+## Pourquoi une méthode structurée change tout
 
-Quand le plan est clair, le stress diminue. Vous savez ce qui est prioritaire, ce qui peut attendre et comment evaluer vos progres. C est cette clarte qui permet d avancer plus vite sans multiplier les ressources.
+Quand le plan est clair, le stress diminue. Vous savez ce qui est prioritaire, ce qui peut attendre et comment évaluer vos progrès. C’est cette clarté qui permet d’avancer plus vite sans multiplier les ressources.
 
 ## Ce qu il faut viser
 
-Pour reussir le DELE B2, vous n avez pas besoin d etre parfait. Vous devez surtout etre regulier, comprendre les attentes de l examen et apprendre a produire une langue suffisamment solide, precise et coherente.
+Pour réussir le DELE B2, vous n’avez pas besoin d’être parfait. Vous devez surtout être régulier, comprendre les attentes de l’examen et apprendre à produire une langue suffisamment solide, précise et cohérente.
 
-Si vous avez une echeance proche, l essentiel est de travailler moins au hasard et plus avec intention.
+Si vous avez une échéance proche, l’essentiel est de travailler moins au hasard et plus avec intention.
