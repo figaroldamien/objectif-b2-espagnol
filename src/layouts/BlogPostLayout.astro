@@ -1,0 +1,71 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import CTAInline from "@/components/marketing/CTAInline.astro";
+import { articleSchema, breadcrumbSchema } from "@/lib/schema";
+import { formatDate } from "@/lib/content";
+
+type Props = {
+  post: CollectionEntry<"blog">;
+};
+
+const { post } = Astro.props;
+const schema = [
+  breadcrumbSchema([
+    { name: "Accueil", url: "https://www.objectifb2espagnol.fr/" },
+    { name: "Blog", url: "https://www.objectifb2espagnol.fr/blog" },
+    { name: post.data.title, url: `https://www.objectifb2espagnol.fr/blog/${post.slug}` }
+  ]),
+  articleSchema({
+    title: post.data.seoTitle ?? post.data.title,
+    description: post.data.seoDescription ?? post.data.description,
+    publishedTime: post.data.publishDate.toISOString(),
+    updatedTime: post.data.updatedDate?.toISOString(),
+    image: post.data.heroImage ? `https://www.objectifb2espagnol.fr${post.data.heroImage}` : undefined,
+    pathname: `/blog/${post.slug}`
+  })
+];
+---
+
+<BaseLayout
+  title={post.data.seoTitle ?? post.data.title}
+  description={post.data.seoDescription ?? post.data.description}
+  pathname={`/blog/${post.slug}`}
+  image={post.data.heroImage}
+  type="article"
+  schema={schema}
+>
+  <section class="section-gap pb-10">
+    <div class="container-shell max-w-4xl">
+      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: post.data.title, href: `/blog/${post.slug}` }]} />
+
+      <header class="space-y-5">
+        <p class="eyebrow">{post.data.category}</p>
+        <h1 class="text-4xl sm:text-5xl">{post.data.title}</h1>
+        <p class="max-w-3xl text-lg leading-8 text-ink/75">{post.data.description}</p>
+        <div class="flex flex-wrap gap-3 text-sm text-ink/55">
+          <span>Publie le {formatDate(post.data.publishDate)}</span>
+          {post.data.updatedDate && <span>Mis a jour le {formatDate(post.data.updatedDate)}</span>}
+        </div>
+      </header>
+
+      {
+        post.data.heroImage && (
+          <img
+            src={post.data.heroImage}
+            alt=""
+            class="mt-8 w-full rounded-[2rem] border border-line object-cover"
+          />
+        )
+      }
+
+      <article class="prose-brand mt-10">
+        <slot />
+      </article>
+
+      <CTAInline variant={post.data.ctaVariant} />
+    </div>
+  </section>
+  <slot name="afterContent" />
+</BaseLayout>

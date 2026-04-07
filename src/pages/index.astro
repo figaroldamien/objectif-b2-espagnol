@@ -1,0 +1,131 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Hero from "@/components/marketing/Hero.astro";
+import ProofBar from "@/components/marketing/ProofBar.astro";
+import CTAFooter from "@/components/marketing/CTAFooter.astro";
+import NewsletterForm from "@/components/NewsletterForm.astro";
+import ArticleCard from "@/components/marketing/ArticleCard.astro";
+import TestimonialCard from "@/components/marketing/TestimonialCard.astro";
+import { organizationSchema, personSchema } from "@/lib/schema";
+import { sortBlogPosts, sortTestimonials } from "@/lib/content";
+
+const featuredPosts = sortBlogPosts(
+  await getCollection("blog", ({ data }) => !data.draft && data.featured)
+).slice(0, 3);
+
+const testimonials = sortTestimonials(
+  await getCollection("testimonials", ({ data }) => data.featured)
+).slice(0, 3);
+---
+
+<BaseLayout
+  pathname="/"
+  schema={[organizationSchema(), personSchema()]}
+>
+  <Hero
+    title="La methode structuree pour atteindre le niveau B2/C1 en espagnol et reussir votre certification."
+    description="Un accompagnement clair, rassurant et oriente resultat pour les etudiants qui ont une echeance, veulent un plan precis et ne peuvent plus perdre du temps."
+  />
+
+  <ProofBar />
+
+  <section class="section-gap pt-8">
+    <div class="container-shell grid gap-6 lg:grid-cols-3">
+      <div class="surface-card p-8">
+        <p class="eyebrow">Pour qui</p>
+        <h2 class="mt-3 text-3xl">Vous avez un objectif concret et une date.</h2>
+        <p class="mt-4 leading-7 text-ink/75">
+          Cette offre est pensee pour les etudiants et jeunes adultes qui doivent valider un niveau B2/C1 pour partir etudier a l etranger ou obtenir une certification.
+        </p>
+      </div>
+      <div class="surface-card p-8">
+        <p class="eyebrow">Le vrai probleme</p>
+        <h2 class="mt-3 text-3xl">Vous travaillez beaucoup, mais sans savoir quoi prioriser.</h2>
+        <p class="mt-4 leading-7 text-ink/75">
+          Le manque de methode fait perdre du temps. Nous clarifions les competences a travailler, l ordre de progression et les criteres qui comptent a l examen.
+        </p>
+      </div>
+      <div class="surface-card p-8">
+        <p class="eyebrow">La difference</p>
+        <h2 class="mt-3 text-3xl">Une pedagogie logique, simple et rassurante.</h2>
+        <p class="mt-4 leading-7 text-ink/75">
+          L approche vient d un parcours atypique d ancienne professeure de mathematiques au Chili: beaucoup de structure, peu de flou, des explications faciles a appliquer.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-gap">
+    <div class="container-shell grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="space-y-4">
+        <p class="eyebrow">La methode</p>
+        <h2 class="text-4xl">Une progression claire en 4 etapes</h2>
+        <p class="text-lg leading-8 text-ink/75">
+          Tout est pense pour transformer une preparation confuse en plan executable.
+        </p>
+      </div>
+      <div class="grid gap-4">
+        {[
+          ["1. Diagnostic", "Nous evaluons le niveau reel, la date cible et les points qui freinent la progression."],
+          ["2. Priorisation", "Vous repartez avec un plan simple: quoi travailler, dans quel ordre et avec quelles attentes."],
+          ["3. Entrainement cible", "Oral, ecrit, comprehension et structures utiles sont pratiques sur des formats proches de l examen."],
+          ["4. Simulation", "Des retours precis vous permettent d ajuster avant la certification et de gagner en confiance."]
+        ].map(([title, text]) => (
+          <div class="surface-card p-6">
+            <h3 class="text-2xl">{title}</h3>
+            <p class="mt-3 leading-7 text-ink/75">{text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-gap bg-white/40">
+    <div class="container-shell grid gap-10 lg:grid-cols-[1fr_0.9fr]">
+      <div class="space-y-5">
+        <p class="eyebrow">Offre principale</p>
+        <h2 class="text-4xl">Programme Objectif B2 en 8 a 12 semaines</h2>
+        <p class="max-w-2xl text-lg leading-8 text-ink/75">
+          Diagnostic initial, plan personnalise, cours individuels ou mini-groupes, preparation orale et ecrite, simulations d examen et suivi regulier.
+        </p>
+        <ul class="space-y-3 leading-7 text-ink/75">
+          <li>Preparation centree sur les points qui font vraiment gagner des points.</li>
+          <li>Accompagnement adapte a une date d examen ou un objectif universitaire.</li>
+          <li>Approche simple a suivre meme si vous manquez de temps.</li>
+        </ul>
+        <a href="/cours/espagnol-certification" class="btn-primary">Decouvrir l offre certification</a>
+      </div>
+      <NewsletterForm compact={true} />
+    </div>
+  </section>
+
+  <section class="section-gap">
+    <div class="container-shell">
+      <div class="mb-8 space-y-3">
+        <p class="eyebrow">Temoignages</p>
+        <h2 class="text-4xl">Des etudiants qui voulaient un cadre clair et un resultat concret</h2>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {testimonials.map((entry) => <TestimonialCard {...entry.data} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-gap bg-white/40">
+    <div class="container-shell">
+      <div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div class="space-y-2">
+          <p class="eyebrow">Blog SEO</p>
+          <h2 class="text-4xl">Des contenus pensés pour attirer, rassurer et convertir</h2>
+        </div>
+        <a href="/blog" class="btn-secondary">Voir tous les articles</a>
+      </div>
+      <div class="grid gap-6 lg:grid-cols-3">
+        {featuredPosts.map((post) => <ArticleCard post={post} />)}
+      </div>
+    </div>
+  </section>
+
+  <CTAFooter />
+</BaseLayout>

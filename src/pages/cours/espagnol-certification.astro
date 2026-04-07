@@ -1,0 +1,165 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import FAQList from "@/components/FAQList.astro";
+import CTAFooter from "@/components/marketing/CTAFooter.astro";
+import TestimonialCard from "@/components/marketing/TestimonialCard.astro";
+import { faqSchema, breadcrumbSchema } from "@/lib/schema";
+import { sortFaqs, sortTestimonials } from "@/lib/content";
+
+const faqs = sortFaqs(
+  await getCollection("faqs", ({ data }) => data.category === "certification")
+).map((entry) => ({
+  question: entry.data.question,
+  answer: entry.data.answer
+}));
+
+const testimonials = sortTestimonials(
+  await getCollection("testimonials", ({ data }) => data.featured)
+).slice(0, 3);
+
+const schema = [
+  breadcrumbSchema([
+    { name: "Accueil", url: "https://www.objectifb2espagnol.fr/" },
+    { name: "Cours certification", url: "https://www.objectifb2espagnol.fr/cours/espagnol-certification" }
+  ]),
+  faqSchema(faqs)
+];
+---
+
+<BaseLayout
+  title="Cours espagnol certification B2/C1 | Objectif B2 Espagnol"
+  description="Programme premium pour preparer une certification d espagnol B2/C1 avec methode structuree, diagnostic et simulations."
+  pathname="/cours/espagnol-certification"
+  schema={schema}
+>
+  <section class="section-gap">
+    <div class="container-shell">
+      <Breadcrumbs items={[{ label: "Cours certification", href: "/cours/espagnol-certification" }]} />
+
+      <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+        <div class="space-y-6">
+          <p class="eyebrow">Offre phare</p>
+          <h1 class="text-5xl">Programme Objectif B2 en 8 a 12 semaines</h1>
+          <p class="max-w-3xl text-xl leading-8 text-ink/75">
+            Pour les etudiants et jeunes adultes qui doivent valider un niveau B2/C1, avec une methode claire, rassurante et orientee resultats.
+          </p>
+          <div class="flex flex-col gap-3 sm:flex-row">
+            <a href="/contact" class="btn-primary">Reserver un diagnostic</a>
+            <a href="/ressources/guide-b2" class="btn-secondary">Telecharger le guide gratuit</a>
+          </div>
+        </div>
+
+        <div class="surface-card p-8">
+          <p class="text-sm uppercase tracking-[0.18em] text-ink/45">Ce que vous cherchez probablement</p>
+          <ul class="mt-5 space-y-4 leading-7 text-ink/75">
+            <li>Un plan clair plutot qu une accumulation d exercices sans fil conducteur.</li>
+            <li>Un accompagnement pour savoir quoi travailler avant votre date limite.</li>
+            <li>Des retours concrets sur l oral, l ecrit et les criteres de correction.</li>
+            <li>Une preparation qui rassure et fait gagner du temps.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-gap pt-4">
+    <div class="container-shell grid gap-6 md:grid-cols-3">
+      {[
+        ["Le probleme", "Vous avez une echeance et vous sentez que votre travail n est pas assez structure pour securiser le resultat."],
+        ["Pour qui", "Etudiants visant un DELE, un test d admission ou une validation de niveau pour partir etudier a l etranger."],
+        ["Resultat attendu", "Savoir exactement quoi faire chaque semaine et arriver a l examen avec un cadre clair."]
+      ].map(([title, text]) => (
+        <div class="surface-card p-7">
+          <h2 class="text-2xl">{title}</h2>
+          <p class="mt-3 leading-7 text-ink/75">{text}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-gap">
+    <div class="container-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="space-y-3">
+        <p class="eyebrow">Resultats attendus</p>
+        <h2 class="text-4xl">Vous avancez avec des priorites nettes</h2>
+      </div>
+      <div class="grid gap-4">
+        {[
+          "Comprendre la structure de l examen et les criteres qui comptent.",
+          "Renforcer l oral et l ecrit avec des exercices utiles plutot que disperses.",
+          "Corriger les faiblesses recurrentes qui bloquent le passage de B1 a B2.",
+          "Gagner en confiance avec des simulations et du feedback precis."
+        ].map((item) => (
+          <div class="surface-card p-6"><p class="leading-7 text-ink/75">{item}</p></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-gap bg-white/40">
+    <div class="container-shell">
+      <div class="mb-8 space-y-3">
+        <p class="eyebrow">Methode</p>
+        <h2 class="text-4xl">Comment se deroule l accompagnement</h2>
+      </div>
+      <div class="grid gap-5 lg:grid-cols-4">
+        {[
+          ["Diagnostic initial", "Evaluation du niveau, de l objectif et de l echeance."],
+          ["Plan personnalise", "Priorites claires, charge de travail adaptee et feuille de route."],
+          ["Preparation ciblee", "Oral, ecrit, comprehension et structures utiles travailles chaque semaine."],
+          ["Simulation et ajustements", "Corrections detaillees pour consolider avant l examen."]
+        ].map(([title, text]) => (
+          <div class="surface-card p-6">
+            <h3 class="text-2xl">{title}</h3>
+            <p class="mt-3 leading-7 text-ink/75">{text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-gap">
+    <div class="container-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="space-y-3">
+        <p class="eyebrow">Inclus</p>
+        <h2 class="text-4xl">Ce que comprend le programme</h2>
+      </div>
+      <div class="surface-card p-8">
+        <ul class="grid gap-4 leading-7 text-ink/75 sm:grid-cols-2">
+          <li>Diagnostic individuel</li>
+          <li>Plan de travail personnalise</li>
+          <li>Cours individuels ou petit groupe</li>
+          <li>Preparation de l oral et de l ecrit</li>
+          <li>Simulations d examen</li>
+          <li>Suivi et feedback precis</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-gap bg-white/40">
+    <div class="container-shell">
+      <div class="mb-8 space-y-3">
+        <p class="eyebrow">Preuve sociale</p>
+        <h2 class="text-4xl">90% de reussite et des retours tres concrets</h2>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {testimonials.map((entry) => <TestimonialCard {...entry.data} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-gap">
+    <div class="container-shell">
+      <div class="mb-8 space-y-3">
+        <p class="eyebrow">FAQ</p>
+        <h2 class="text-4xl">Questions frequentes sur la preparation certification</h2>
+      </div>
+      <FAQList items={faqs} />
+    </div>
+  </section>
+
+  <CTAFooter />
+</BaseLayout>

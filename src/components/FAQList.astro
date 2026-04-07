@@ -1,0 +1,19 @@
+---
+type Item = { question: string; answer: string };
+type Props = { items: Item[] };
+
+const { items } = Astro.props;
+---
+
+<div class="space-y-4">
+  {
+    items.map((item) => (
+      <details class="surface-card group p-6">
+        <summary class="cursor-pointer list-none pr-8 text-lg font-semibold text-ink marker:hidden">
+          {item.question}
+        </summary>
+        <p class="mt-4 max-w-3xl leading-7 text-ink/75">{item.answer}</p>
+      </details>
+    ))
+  }
+</div>

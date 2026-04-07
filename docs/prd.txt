@@ -1,0 +1,972 @@
+PRD — Objectif B2 Espagnol
+
+
+
+1. Vue d’ensemble
+
+
+
+Nom du produit
+
+
+
+Objectif B2 Espagnol
+
+
+
+Type de produit
+
+
+
+Site marketing et éditorial orienté :
+
+acquisition SEO,
+
+conversion en leads,
+
+vente d’une offre premium de préparation à la certification d’espagnol.
+
+
+
+Vision
+
+
+
+Créer un site clair, rapide et crédible qui aide des apprenants à atteindre le niveau B2/C1 en espagnol grâce à une méthode structurée, tout en générant des prospects qualifiés pour une activité de cours et d’accompagnement premium.
+
+
+
+Résultat attendu
+
+
+
+Un site capable de :
+
+attirer un trafic qualifié via le contenu,
+
+convertir les visiteurs en abonnés email ou en demandes de diagnostic,
+
+mettre en avant l’offre principale,
+
+construire une autorité autour de la préparation à la certification.
+
+2. Contexte
+
+
+
+La fondatrice est professeure d’espagnol en ligne, avec un excellent historique de résultats sur les certifications : 90% de réussite.
+
+
+
+Elle enseigne actuellement à plusieurs publics :
+
+adultes qui veulent voyager,
+
+étudiants qui veulent obtenir une certification pour étudier à l’étranger,
+
+élèves du secondaire ayant besoin de soutien scolaire.
+
+
+
+Elle a un profil différenciant :
+
+ancienne professeure de mathématiques au Chili,
+
+approche pédagogique logique et structurée,
+
+expérience également en cours de français et d’anglais pour des hispanophones en France.
+
+
+
+Le site doit capitaliser sur ce positionnement différenciant, sans devenir un site trop généraliste.
+
+3. Problème à résoudre
+
+
+
+Aujourd’hui, le besoin est de disposer d’un site qui :
+
+présente une offre claire,
+
+donne confiance rapidement,
+
+attire des visiteurs via Google,
+
+transforme l’expertise pédagogique en système d’acquisition régulier,
+
+évite de dépendre uniquement du bouche-à-oreille ou des plateformes externes.
+
+
+
+Les candidats à une certification ont souvent :
+
+une échéance claire,
+
+du stress,
+
+un manque de méthode,
+
+une difficulté à savoir quoi travailler,
+
+un besoin de cadre, de structure et de feedback.
+
+
+
+Le produit doit répondre à ce besoin.
+
+4. Objectifs produit
+
+
+
+Objectif principal
+
+
+
+Vendre une offre premium de préparation à la certification d’espagnol B2/C1.
+
+
+
+Objectifs secondaires
+
+capturer des emails via un lead magnet,
+
+construire une présence SEO durable,
+
+démontrer l’expertise et la crédibilité,
+
+préparer une base extensible pour des offres futures.
+
+
+
+Hors périmètre à ce stade
+
+espace élève complexe,
+
+authentification,
+
+paiement intégré sur mesure,
+
+dashboard,
+
+LMS complet,
+
+CRM interne.
+
+5. Cibles
+
+
+
+Cible principale
+
+
+
+Étudiants ou jeunes adultes qui doivent obtenir un niveau B2/C1 en espagnol pour :
+
+partir étudier à l’étranger,
+
+répondre à un prérequis académique,
+
+réussir une certification dans un délai défini.
+
+
+
+Cibles secondaires
+
+adultes ayant un objectif concret lié au voyage,
+
+élèves du secondaire ayant besoin de soutien scolaire,
+
+plus tard, éventuellement hispanophones en France apprenant le français.
+
+
+
+Persona principal
+
+
+
+Étudiant orienté résultat
+
+a une échéance,
+
+veut une méthode claire,
+
+cherche un accompagnement sérieux,
+
+est prêt à payer pour maximiser ses chances de réussite.
+
+6. Proposition de valeur
+
+
+
+Objectif B2 Espagnol aide les apprenants à obtenir leur certification d’espagnol B2/C1 grâce à une méthode claire, structurée et efficace.
+
+
+
+Éléments différenciants
+
+90% de réussite
+
+pédagogie structurée
+
+approche logique inspirée d’une culture mathématique
+
+focalisation sur le résultat et non sur la grammaire inutile
+
+accompagnement ciblé sur les points qui font réussir l’examen
+
+
+
+Promesse produit
+
+
+
+Atteindre le niveau B2/C1 en espagnol avec une méthode claire, structurée et orientée résultats.
+7. Offre mise en avant
+
+
+
+Offre principale
+
+
+
+Programme Objectif B2 en 8 à 12 semaines
+
+
+
+Éléments à présenter sur le site
+
+diagnostic initial,
+
+plan de travail personnalisé,
+
+cours individuels ou petits groupes,
+
+préparation de l’écrit et de l’oral,
+
+simulations d’examen,
+
+suivi régulier,
+
+méthodologie claire.
+
+
+
+CTA principal
+
+
+
+Réserver un diagnostic
+
+
+
+CTA secondaire
+
+
+
+Télécharger le guide gratuit
+
+8. Positionnement de marque
+
+
+
+Nom retenu
+
+
+
+Objectif B2 Espagnol
+
+
+
+Territoire de marque
+
+clarté,
+
+méthode,
+
+progression,
+
+efficacité,
+
+réussite.
+
+
+
+Ton éditorial
+
+clair,
+
+rassurant,
+
+direct,
+
+structuré,
+
+concret.
+
+
+
+Ton à éviter
+
+trop scolaire,
+
+trop académique,
+
+flou,
+
+trop promotionnel,
+
+jargon SEO ou marketing visible.
+
+9. Portée fonctionnelle
+
+
+
+Le site doit inclure
+
+une page d’accueil,
+
+une page d’offre principale,
+
+un blog,
+
+des pages articles,
+
+une landing page de lead magnet,
+
+une page à propos,
+
+une page contact / réservation,
+
+des témoignages,
+
+une FAQ,
+
+les pages légales minimales.
+
+
+
+Le site doit permettre
+
+la lecture confortable sur mobile,
+
+la navigation entre articles,
+
+la capture d’email,
+
+l’accès à une prise de rendez-vous,
+
+la mise en avant de preuves sociales,
+
+l’optimisation SEO de base.
+
+10. Parcours utilisateur principaux
+
+
+
+Parcours 1 — Visiteur SEO
+
+Le visiteur arrive sur un article.
+
+Il lit un contenu utile sur le B2 ou la certification.
+
+Il voit un CTA vers le guide B2.
+
+Il laisse son email.
+
+Il est redirigé vers un tunnel email ou une invitation à réserver un diagnostic.
+
+
+
+Parcours 2 — Visiteur à forte intention
+
+Le visiteur arrive sur la homepage ou une page offre.
+
+Il comprend rapidement la promesse.
+
+Il voit le taux de réussite, la méthode, les témoignages.
+
+Il clique sur “Réserver un diagnostic”.
+
+
+
+Parcours 3 — Visiteur en phase de réassurance
+
+Il consulte la page À propos ou Méthode.
+
+Il découvre le profil de la fondatrice.
+
+Il comprend l’angle “méthode structurée”.
+
+Il revient vers l’offre ou le formulaire.
+
+11. Architecture de l’information
+
+
+
+Navigation principale recommandée
+
+Accueil
+
+Programme B2/C1
+
+Blog
+
+Méthode
+
+À propos
+
+Contact
+
+
+
+Structure des contenus
+
+
+
+Le contenu doit s’organiser en 4 blocs :
+
+acquisition,
+
+conversion,
+
+réassurance,
+
+fidélisation.
+
+
+
+Pages clés
+
+/
+
+/cours/espagnol-certification
+
+/blog
+
+/blog/[slug]
+
+/ressources/guide-b2
+
+/a-propos
+
+/contact
+
+/temoignages
+
+/methode
+
+
+
+Pages SEO ciblées
+
+/certification/dele-b2
+
+/certification/dele-c1
+
+pages d’articles ciblant les requêtes à intention forte.
+
+12. Exigences de contenu
+
+
+
+Piliers de contenu
+
+Certification
+
+Méthode et progression
+
+Oral et production
+
+Grammaire utile
+
+Bonus trafic
+
+
+
+Exemples d’articles prioritaires
+
+réussir le DELE B2
+
+structure de l’examen B2
+
+critères de correction
+
+réussir l’oral espagnol B2
+
+combien de temps pour atteindre B2
+
+passer de B1 à B2
+
+ser vs estar expliqué simplement
+
+subjonctif espagnol facile
+
+
+
+Structure type d’un article
+
+titre clair,
+
+introduction orientée promesse,
+
+contenu structuré,
+
+FAQ,
+
+CTA intermédiaire,
+
+CTA final,
+
+articles liés.
+
+13. Exigences UX / UI
+
+
+
+Principes UX
+
+compréhension immédiate de l’offre,
+
+hiérarchie visuelle simple,
+
+lecture fluide,
+
+CTA visibles,
+
+réassurance tôt dans la page,
+
+maillage interne utile.
+
+
+
+Principes UI
+
+design sobre,
+
+impression de sérieux et d’efficacité,
+
+sections bien espacées,
+
+lisibilité forte,
+
+mobile-first,
+
+pas de surcharge visuelle.
+
+
+
+Éléments à montrer rapidement sur la homepage
+
+le nom,
+
+la promesse,
+
+le taux de réussite,
+
+le public ciblé,
+
+le CTA principal,
+
+un CTA secondaire vers le guide.
+
+14. Exigences SEO
+
+
+
+Fondamentaux
+
+URLs propres,
+
+balises title et meta description,
+
+H1 unique,
+
+structure H2/H3 cohérente,
+
+sitemap,
+
+RSS,
+
+pages rapides,
+
+maillage interne stratégique.
+
+
+
+Données structurées souhaitées
+
+Article
+
+FAQPage
+
+BreadcrumbList
+
+Organization
+
+Person
+
+
+
+Intentions SEO prioritaires
+
+réussir une certification,
+
+atteindre B2,
+
+préparer l’oral,
+
+comprendre les attentes de l’examen,
+
+résoudre les points de blocage fréquents.
+
+15. Exigences techniques
+
+
+
+Stack retenue
+
+Astro
+
+Tailwind CSS
+
+Content Collections
+
+Markdown / MDX
+
+très peu de JavaScript côté client
+
+Vercel ou Netlify
+
+
+
+Principes techniques
+
+privilégier le rendu statique,
+
+interactivité limitée à quelques composants ciblés,
+
+architecture modulaire,
+
+composants réutilisables,
+
+contenu maintenable.
+
+
+
+Interactivité autorisée
+
+formulaire newsletter,
+
+FAQ accordéon,
+
+embed Calendly,
+
+éventuellement quiz plus tard.
+
+
+
+À éviter
+
+React partout sans nécessité,
+
+logique applicative lourde,
+
+sur-ingénierie,
+
+CMS complexe au démarrage.
+
+16. Modèle de contenu
+
+
+
+Collection 
+
+blog
+
+
+
+Champs suggérés :
+
+title
+
+description
+
+excerpt
+
+publishDate
+
+updatedDate
+
+category
+
+tags
+
+draft
+
+featured
+
+seoTitle
+
+seoDescription
+
+faq
+
+ctaVariant
+
+heroImage
+
+
+
+Collection 
+
+testimonials
+
+
+
+Champs suggérés :
+
+name
+
+goal
+
+result
+
+quote
+
+featured
+
+order
+
+
+
+Collection 
+
+faqs
+
+
+
+Stockage JSON ou Markdown selon le besoin.
+
+17. MVP
+
+
+
+Périmètre MVP
+
+homepage,
+
+page offre,
+
+blog index,
+
+template article,
+
+3 premiers articles,
+
+page lead magnet,
+
+page À propos,
+
+page Contact / réservation.
+
+
+
+Critère de réussite MVP
+
+
+
+Le site doit être publiable rapidement, crédible, rapide, et permettre :
+
+de recevoir des demandes de contact,
+
+de capturer des emails,
+
+de référencer les premiers contenus.
+
+18. Indicateurs de succès
+
+
+
+Business
+
+nombre de réservations de diagnostic,
+
+nombre d’emails collectés,
+
+taux de conversion visite → lead,
+
+taux de conversion lead → appel.
+
+
+
+Produit / contenu
+
+trafic organique,
+
+temps passé sur les articles,
+
+clics sur les CTA,
+
+taux de consultation de la page offre,
+
+progression des impressions SEO.
+
+
+
+Qualité technique
+
+performance Lighthouse correcte,
+
+bonne lisibilité mobile,
+
+pages rapidement indexables.
+
+19. Roadmap recommandée
+
+
+
+Phase 1 — Lancement
+
+homepage,
+
+page offre,
+
+blog,
+
+lead magnet,
+
+système de CTA,
+
+formulaire email,
+
+réservation.
+
+
+
+Phase 2 — Renforcement
+
+plus d’articles,
+
+page méthode,
+
+témoignages détaillés,
+
+FAQ enrichie,
+
+meilleur maillage interne.
+
+
+
+Phase 3 — Extension
+
+pages ciblées DELE B2 / C1,
+
+contenus voyage,
+
+contenus secondaire,
+
+éventuellement offre complémentaire.
+
+20. Risques et garde-fous
+
+
+
+Risques
+
+site trop généraliste,
+
+promesse pas assez claire,
+
+trop de technique, pas assez de conversion,
+
+blog sans CTA,
+
+design joli mais faible commercialement,
+
+contenu trop scolaire.
+
+
+
+Garde-fous
+
+toujours prioriser la niche certification,
+
+afficher la preuve de résultat,
+
+garder le site simple,
+
+intégrer la capture de leads dès le départ,
+
+lier tout contenu à une intention business.
+
+21. Décisions déjà prises
+
+Le nom retenu est Objectif B2 Espagnol.
+
+La niche prioritaire est la préparation à la certification B2/C1.
+
+L’angle distinctif est la méthode structurée et logique.
+
+La stack retenue est Astro.
+
+Le site doit être un site marketing + blog SEO, pas une application complexe.
+
+Le lead magnet central est une checklist / guide pour réussir le B2.
+
+22. Prompt synthétique pour Codex
+
+Construis le MVP d’un site Astro nommé “Objectif B2 Espagnol”.
+
+Objectif :
+Créer un site marketing + blog SEO pour une professeure d’espagnol en ligne qui vend une offre premium de préparation à la certification B2/C1.
+
+Contexte métier :
+- 90% de réussite aux certifications
+- approche claire, logique, structurée
+- cible principale : étudiants qui veulent obtenir une certification pour étudier à l’étranger
+- cibles secondaires : adultes voyage, soutien scolaire secondaire
+- différenciateur : ancienne prof de maths au Chili, pédagogie structurée
+
+Contraintes :
+- Astro
+- Tailwind CSS
+- Content Collections
+- Markdown / MDX
+- très peu de JavaScript
+- site rapide, SEO-friendly, mobile-first
+- architecture simple, modulaire, maintenable
+
+Pages MVP :
+- homepage
+- page offre certification
+- blog index
+- page article
+- page lead magnet
+- page à propos
+- page contact / réservation
+
+Composants :
+- Header
+- Footer
+- Hero
+- ProofBar
+- CTAInline
+- CTAFooter
+- TestimonialCard
+- NewsletterForm
+- FAQList
+- ArticleCard
+- RelatedPosts
+- SeoHead
+
+Collections :
+- blog
+- testimonials
+- faqs
+
+Exigences produit :
+- mettre en avant “Objectif B2 Espagnol”
+- montrer la promesse et le taux de réussite rapidement
+- intégrer des CTA de réservation et de téléchargement du guide
+- permettre une bonne base SEO
+- garder un design sobre, clair, sérieux, orienté conversion

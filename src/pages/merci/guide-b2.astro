@@ -1,0 +1,37 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { siteConfig } from "@/lib/site";
+---
+
+<BaseLayout
+  title="Merci | Guide B2 Espagnol"
+  description="Votre demande a bien ete prise en compte. Vous pouvez maintenant acceder au guide B2 espagnol."
+  pathname="/merci/guide-b2"
+  noindex={true}
+>
+  <section class="section-gap">
+    <div class="container-shell max-w-3xl">
+      <div class="surface-card p-8 sm:p-12">
+        <p class="eyebrow">Merci</p>
+        <h1 class="mt-3 text-4xl">Votre guide est pret</h1>
+        <p class="mt-4 max-w-2xl text-lg leading-8 text-ink/75">
+          Votre demande a bien ete envoyee. Cliquez ci-dessous pour ouvrir le guide B2 espagnol, puis revenez quand vous voulez pour reserver un diagnostic.
+        </p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <a href={siteConfig.leadMagnetPdfPath} download class="btn-primary">
+            Telecharger le guide B2 espagnol
+          </a>
+          <a href="/contact" class="btn-secondary">
+            Reserver un diagnostic
+          </a>
+        </div>
+        <p class="mt-4 text-sm leading-7 text-ink/60">
+          Si le telechargement ne demarre pas, utilisez ce lien direct :
+          <a href={siteConfig.leadMagnetPdfPath} class="ml-1 font-semibold text-accent">
+            ouvrir le PDF
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

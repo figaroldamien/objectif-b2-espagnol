@@ -1,0 +1,31 @@
+---
+import { primaryCtas } from "@/lib/site";
+
+type Variant = keyof typeof primaryCtas;
+type Props = {
+  variant?: Variant;
+  title?: string;
+  description?: string;
+};
+
+const {
+  variant = "diagnostic",
+  title = variant === "guide" ? "Besoin d un plan clair pour le B2 ?" : "Pret a structurer votre preparation ?",
+  description = variant === "guide"
+    ? "Telechargez la checklist gratuite pour savoir quoi travailler avant l examen."
+    : "Reserve un diagnostic pour repartir avec une strategie adaptee a votre niveau et votre echeance."
+} = Astro.props;
+
+const cta = primaryCtas[variant];
+---
+
+<aside class="surface-card my-10 p-8">
+  <div class="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+    <div class="space-y-2">
+      <p class="eyebrow">Passer a l action</p>
+      <h2 class="text-2xl">{title}</h2>
+      <p class="max-w-2xl leading-7 text-ink/75">{description}</p>
+    </div>
+    <a href={cta.href} class="btn-primary">{cta.label}</a>
+  </div>
+</aside>

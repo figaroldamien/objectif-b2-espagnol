@@ -1,0 +1,26 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ArticleCard from "@/components/marketing/ArticleCard.astro";
+
+type Props = {
+  posts: CollectionEntry<"blog">[];
+};
+
+const { posts } = Astro.props;
+---
+
+{
+  posts.length > 0 && (
+    <section class="section-gap pt-8">
+      <div class="container-shell">
+        <div class="mb-8 space-y-2">
+          <p class="eyebrow">Aller plus loin</p>
+          <h2 class="text-3xl">Articles lies</h2>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {posts.map((post) => <ArticleCard post={post} />)}
+        </div>
+      </div>
+    </section>
+  )
+}

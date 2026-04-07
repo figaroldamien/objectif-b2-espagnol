@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import CTAFooter from "@/components/marketing/CTAFooter.astro";
+import TestimonialCard from "@/components/marketing/TestimonialCard.astro";
+import { breadcrumbSchema } from "@/lib/schema";
+import { sortTestimonials } from "@/lib/content";
+
+const testimonials = sortTestimonials(await getCollection("testimonials"));
+---
+
+<BaseLayout
+  title="Temoignages | Objectif B2 Espagnol"
+  description="Retours d eleves accompagnes vers le niveau B2/C1 avec une methode claire et structuree."
+  pathname="/temoignages"
+  schema={breadcrumbSchema([
+    { name: "Accueil", url: "https://www.objectifb2espagnol.fr/" },
+    { name: "Temoignages", url: "https://www.objectifb2espagnol.fr/temoignages" }
+  ])}
+>
+  <section class="section-gap">
+    <div class="container-shell">
+      <Breadcrumbs items={[{ label: "Temoignages", href: "/temoignages" }]} />
+      <div class="space-y-5">
+        <p class="eyebrow">Temoignages</p>
+        <h1 class="text-5xl">Des progres concrets, une preparation plus sereine</h1>
+        <p class="max-w-3xl text-lg leading-8 text-ink/75">
+          Les retours ci-dessous illustrent le type d accompagnement propose: une methode claire, un meilleur cadrage et des resultats plus solides a l examen.
+        </p>
+      </div>
+      <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {testimonials.map((entry) => <TestimonialCard {...entry.data} />)}
+      </div>
+    </div>
+  </section>
+
+  <CTAFooter />
+</BaseLayout>

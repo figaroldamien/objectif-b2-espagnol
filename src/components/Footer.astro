@@ -1,0 +1,31 @@
+---
+import { siteConfig } from "@/lib/site";
+---
+
+<footer class="border-t border-line bg-white/70">
+  <div class="container-shell grid gap-10 py-12 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
+    <div class="space-y-4">
+      <p class="font-display text-2xl">Objectif B2 Espagnol</p>
+      <p class="max-w-md text-sm leading-7 text-ink/75">
+        La methode structuree pour atteindre le niveau B2/C1 en espagnol et reussir sa certification avec un accompagnement clair, rassurant et concret.
+      </p>
+    </div>
+
+    <div class="space-y-3">
+      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-ink/55">Navigation</p>
+      <div class="flex flex-col gap-2 text-sm text-ink/75">
+        {siteConfig.navigation.map((item) => <a href={item.href}>{item.label}</a>)}
+      </div>
+    </div>
+
+    <div class="space-y-3">
+      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-ink/55">Informations</p>
+      <div class="flex flex-col gap-2 text-sm text-ink/75">
+        <a href="/legal/mentions-legales">Mentions legales</a>
+        <a href="/legal/confidentialite">Confidentialite</a>
+        <a href="/legal/cgv">CGV</a>
+        <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+      </div>
+    </div>
+  </div>
+</footer>

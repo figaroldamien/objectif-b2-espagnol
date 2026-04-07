@@ -1,0 +1,71 @@
+---
+import { primaryCtas } from "@/lib/site";
+
+type Props = {
+  eyebrow?: string;
+  title: string;
+  description: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+};
+
+const {
+  eyebrow = "Preparation certification espagnol",
+  title,
+  description,
+  primaryLabel = primaryCtas.diagnostic.label,
+  primaryHref = primaryCtas.diagnostic.href,
+  secondaryLabel = primaryCtas.guide.label,
+  secondaryHref = primaryCtas.guide.href
+} = Astro.props;
+---
+
+<section class="section-gap">
+  <div class="container-shell grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+    <div class="space-y-8">
+      <div class="space-y-5">
+        <p class="eyebrow">{eyebrow}</p>
+        <h1 class="max-w-3xl text-5xl leading-tight sm:text-6xl">{title}</h1>
+        <p class="max-w-2xl text-lg leading-8 text-ink/75">{description}</p>
+      </div>
+
+      <div class="flex flex-col gap-3 sm:flex-row">
+        <a href={primaryHref} class="btn-primary">{primaryLabel}</a>
+        <a href={secondaryHref} class="btn-secondary">{secondaryLabel}</a>
+      </div>
+
+      <div class="grid gap-4 border-t border-line pt-6 sm:grid-cols-3">
+        <div>
+          <p class="text-3xl font-semibold text-ink">90%</p>
+          <p class="mt-1 text-sm text-ink/65">de reussite sur les certifications accompagnees</p>
+        </div>
+        <div>
+          <p class="text-3xl font-semibold text-ink">8 a 12</p>
+          <p class="mt-1 text-sm text-ink/65">semaines pour un plan de preparation cible</p>
+        </div>
+        <div>
+          <p class="text-3xl font-semibold text-ink">1 methode</p>
+          <p class="mt-1 text-sm text-ink/65">claire, logique, rassurante et orientee resultat</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="surface-card p-8 sm:p-10">
+      <div class="space-y-6">
+        <div class="inline-flex rounded-full bg-accent/10 px-4 py-2 text-sm font-semibold text-accent">
+          Programme Objectif B2 en 8 a 12 semaines
+        </div>
+        <div class="space-y-4">
+          <h2 class="text-3xl">Une preparation simple a suivre, meme avec une echeance proche</h2>
+          <ul class="space-y-3 text-base leading-7 text-ink/75">
+            <li>Diagnostic initial pour identifier les points qui bloquent vraiment.</li>
+            <li>Plan d action personnalise selon votre niveau, votre date et votre examen cible.</li>
+            <li>Preparation ecrite et orale avec simulations et feedback precis.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

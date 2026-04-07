@@ -1,0 +1,342 @@
+Tu es un assistant de développement senior. Aide-moi à construire le MVP d’un site Astro nommé “Objectif B2 Espagnol”.
+
+## Contexte produit
+
+Je suis professeure d’espagnol en ligne.
+
+Je veux créer un site marketing + blog SEO pour :
+- attirer du trafic qualifié,
+- capter des emails,
+- convertir des visiteurs en appels / diagnostics,
+- vendre une offre premium de préparation à la certification d’espagnol B2/C1.
+
+Mon positionnement :
+- j’aide les étudiants à obtenir leur certification d’espagnol B2/C1,
+- j’ai 90% de réussite,
+- ma pédagogie est claire, structurée, logique,
+- je veux me différencier par une méthode simple, efficace, rassurante,
+- j’ai un profil atypique : ancienne prof de maths au Chili, donc approche très structurée.
+
+Nom de marque :
+Objectif B2 Espagnol
+
+Promesse centrale :
+La méthode structurée pour atteindre le niveau B2/C1 en espagnol et réussir sa certification.
+
+## Cible principale
+
+Étudiants ou jeunes adultes qui :
+- doivent obtenir un niveau B2/C1,
+- ont une échéance,
+- veulent étudier à l’étranger ou valider une certification,
+- sont motivés mais ont besoin d’une méthode claire.
+
+## Cibles secondaires
+
+- adultes qui apprennent l’espagnol pour voyager,
+- élèves du secondaire ayant besoin de soutien scolaire,
+- éventuellement plus tard hispanophones en France apprenant le français.
+
+## Objectif du site
+
+Le site n’est pas une web app complexe.
+C’est un site orienté contenu + conversion.
+
+Priorités :
+1. SEO
+2. Conversion
+3. Simplicité technique
+4. Facilité de maintenance
+
+Je veux un site rapide, propre, crédible, sobre, orienté résultats.
+
+## Stack imposée
+
+Utilise :
+- Astro
+- Tailwind CSS
+- Content Collections Astro
+- Markdown ou MDX pour le contenu
+- très peu de JavaScript côté client
+- architecture modulaire
+- rendu statique par défaut
+
+Tu peux prévoir quelques composants interactifs légers seulement si utile :
+- formulaire newsletter,
+- FAQ accordéon,
+- embed Calendly.
+
+Évite :
+- auth,
+- dashboard,
+- backend complexe,
+- paiement custom,
+- CMS headless lourd,
+- sur-ingénierie.
+
+## Ce que je veux que tu produises
+
+Je veux que tu me proposes puis génères un starter MVP propre avec :
+- architecture de fichiers,
+- layouts,
+- composants réutilisables,
+- pages principales,
+- content collections,
+- logique SEO de base,
+- données d’exemple.
+
+Travaille comme si tu préparais un repo propre, maintenable, prêt à lancer.
+
+## Pages MVP à créer
+
+1. Homepage
+2. Page offre certification
+3. Blog index
+4. Page article dynamique
+5. Landing page lead magnet
+6. Page À propos
+7. Page Contact / Réservation
+8. Page Témoignages
+9. Page Méthode
+10. Pages légales minimales
+
+## URLs cibles
+
+- /
+- /cours/espagnol-certification
+- /blog
+- /blog/[slug]
+- /ressources/guide-b2
+- /a-propos
+- /contact
+- /temoignages
+- /methode
+- /legal/mentions-legales
+- /legal/confidentialite
+- /legal/cgv
+
+Optionnel ensuite :
+- /certification/dele-b2
+- /certification/dele-c1
+
+## Structure éditoriale attendue
+
+Le blog doit servir deux objectifs :
+- acquisition SEO,
+- conversion vers l’offre.
+
+Piliers de contenu :
+1. Certification
+2. Méthode et progression
+3. Oral et production
+4. Grammaire utile
+5. Bonus trafic (voyage)
+
+Exemples d’articles :
+- réussir le DELE B2
+- oral espagnol B2
+- structure de l’examen B2
+- critères de correction
+- combien de temps pour atteindre B2
+- passer de B1 à B2
+- ser vs estar expliqué simplement
+- subjonctif espagnol facile
+
+## Contenu et conversion
+
+Le site doit mettre en avant :
+- 90% de réussite
+- méthode claire et structurée
+- accompagnement vers un objectif précis
+- résultat concret
+
+CTA principaux :
+- Réserver un diagnostic
+- Télécharger le guide gratuit
+
+Lead magnet :
+“Checklist ultime pour réussir le B2 espagnol”
+
+Je veux des CTA intégrés :
+- sur la homepage,
+- dans les articles,
+- sur la page offre,
+- en fin de page.
+
+## Structure attendue de la homepage
+
+La homepage doit inclure :
+- Hero avec promesse claire
+- preuve / chiffres clés
+- pour qui est l’offre
+- présentation de la méthode
+- aperçu de l’offre principale
+- témoignages
+- CTA final
+
+Le message doit être compris en moins de 5 secondes.
+
+## Structure attendue de la page offre
+
+Page la plus importante du site.
+
+Sections :
+- problème du visiteur
+- à qui s’adresse le programme
+- résultats attendus
+- méthode / étapes
+- ce qui est inclus
+- témoignages
+- FAQ
+- CTA réservation
+
+## Exigences UX/UI
+
+Je veux un design :
+- sobre,
+- professionnel,
+- clair,
+- rassurant,
+- mobile-first,
+- sans surcharge visuelle.
+
+Principes :
+- forte hiérarchie visuelle,
+- lisibilité élevée,
+- sections aérées,
+- CTA visibles,
+- preuve sociale affichée tôt.
+
+## Exigences SEO
+
+Prévois :
+- titles et meta descriptions propres,
+- H1/H2 bien structurés,
+- URLs propres,
+- sitemap,
+- RSS,
+- fil d’Ariane si pertinent,
+- maillage interne,
+- données structurées si simple à intégrer :
+- Article
+- FAQPage
+- BreadcrumbList
+- Organization
+- Person
+
+## Content Collections attendues
+
+Crée au minimum :
+- blog
+- testimonials
+- faqs
+
+Champs suggérés pour blog :
+- title
+- description
+- excerpt
+- publishDate
+- updatedDate
+- category
+- tags
+- draft
+- featured
+- seoTitle
+- seoDescription
+- faq
+- ctaVariant
+- heroImage
+
+Champs suggérés pour testimonials :
+- name
+- goal
+- result
+- quote
+- featured
+- order
+
+## Architecture de projet souhaitée
+
+Je veux quelque chose dans cet esprit :
+
+src/
+content/
+blog/
+testimonials/
+faqs/
+components/
+ui/
+layout/
+marketing/
+layouts/
+pages/
+lib/
+styles/
+
+public/
+images/
+pdf/
+
+## Composants attendus
+
+Crée des composants réutilisables du type :
+- Header
+- Footer
+- SeoHead
+- Hero
+- ProofBar
+- CTAInline
+- CTAFooter
+- TestimonialCard
+- NewsletterForm
+- FAQList
+- ArticleCard
+- RelatedPosts
+- CalendlyEmbed
+
+## Données d’exemple
+
+Ajoute du contenu d’exemple réaliste pour que le projet soit immédiatement lisible :
+- 3 articles de blog
+- 2 ou 3 témoignages
+- 1 FAQ certification
+- textes de homepage
+- texte de page offre
+- texte de lead magnet
+
+## Méthode de travail demandée
+
+Je veux que tu répondes en plusieurs étapes :
+
+1. Propose l’arborescence complète du projet
+2. Propose les choix techniques et conventions
+3. Génère les fichiers principaux
+4. Génère les exemples de contenu
+5. Vérifie la cohérence globale
+6. Indique comment lancer le projet localement
+
+## Contraintes importantes
+
+- N’ajoute pas de complexité inutile
+- Reste proche du besoin business
+- Priorise la conversion avant les gadgets
+- Le site doit être simple à maintenir
+- Le code doit être propre, lisible, modulaire
+- Utilise TypeScript quand c’est pertinent
+- Donne des noms de fichiers cohérents
+- Fais des composants petits et réutilisables
+
+## Critères de réussite
+
+Le MVP est réussi si :
+- un visiteur comprend l’offre immédiatement,
+- le site inspire confiance,
+- il y a un blog prêt pour le SEO,
+- les CTA sont bien intégrés,
+- la capture email est prévue,
+- le projet Astro est propre et prêt à enrichir.
+
+Commence par me proposer :
+1. l’arborescence finale,
+2. la liste des fichiers à créer,
+3. puis génère le code fichier par fichier.

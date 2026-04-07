@@ -1,0 +1,21 @@
+---
+type Props = {
+  name: string;
+  goal: string;
+  result: string;
+  quote: string;
+};
+
+const { name, goal, result, quote } = Astro.props;
+---
+
+<article class="surface-card h-full p-7">
+  <div class="space-y-4">
+    <p class="text-base leading-7 text-ink/80">"{quote}"</p>
+    <div class="border-t border-line pt-4">
+      <p class="font-semibold text-ink">{name}</p>
+      <p class="text-sm text-ink/60">{goal}</p>
+      <p class="mt-2 text-sm font-semibold text-accent">{result}</p>
+    </div>
+  </div>
+</article>

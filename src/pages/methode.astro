@@ -1,0 +1,45 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import CTAFooter from "@/components/marketing/CTAFooter.astro";
+import { breadcrumbSchema } from "@/lib/schema";
+---
+
+<BaseLayout
+  title="Methode | Objectif B2 Espagnol"
+  description="La methode structuree d Objectif B2 Espagnol pour faire progresser les candidats vers une certification B2/C1."
+  pathname="/methode"
+  schema={breadcrumbSchema([
+    { name: "Accueil", url: "https://www.objectifb2espagnol.fr/" },
+    { name: "Methode", url: "https://www.objectifb2espagnol.fr/methode" }
+  ])}
+>
+  <section class="section-gap">
+    <div class="container-shell">
+      <Breadcrumbs items={[{ label: "Methode", href: "/methode" }]} />
+      <div class="space-y-5">
+        <p class="eyebrow">Methode</p>
+        <h1 class="text-5xl">Une preparation plus claire, parce qu elle est structuree</h1>
+        <p class="max-w-3xl text-lg leading-8 text-ink/75">
+          La methode vise a retirer le flou: comprendre l objectif, prioriser, entrainer les competences utiles et simuler avant l examen.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-6 lg:grid-cols-2">
+        {[
+          ["Clarifier", "On part d un diagnostic simple pour savoir ou vous en etes et ce qui compte pour votre objectif."],
+          ["Simplifier", "Les notions et exigences sont expliquees avec une logique facile a retenir et a reutiliser."],
+          ["Prioriser", "Chaque seance sert une progression. Vous savez quoi faire, pourquoi et dans quel ordre."],
+          ["Mesurer", "Des simulations et corrections detaillees permettent d objectiver les progres et d ajuster."]
+        ].map(([title, text]) => (
+          <div class="surface-card p-8">
+            <h2 class="text-3xl">{title}</h2>
+            <p class="mt-4 leading-7 text-ink/75">{text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTAFooter />
+</BaseLayout>

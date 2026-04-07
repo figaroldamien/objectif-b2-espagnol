@@ -1,0 +1,52 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import CalendlyEmbed from "@/components/CalendlyEmbed.astro";
+import { breadcrumbSchema } from "@/lib/schema";
+import { siteConfig } from "@/lib/site";
+---
+
+<BaseLayout
+  title="Contact et reservation | Objectif B2 Espagnol"
+  description="Reserve un diagnostic pour faire le point sur votre niveau, votre echeance et votre plan de progression vers le B2/C1."
+  pathname="/contact"
+  schema={breadcrumbSchema([
+    { name: "Accueil", url: "https://www.objectifb2espagnol.fr/" },
+    { name: "Contact", url: "https://www.objectifb2espagnol.fr/contact" }
+  ])}
+>
+  <section class="section-gap">
+    <div class="container-shell">
+      <Breadcrumbs items={[{ label: "Contact", href: "/contact" }]} />
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-6">
+          <p class="eyebrow">Reservation</p>
+          <h1 class="text-5xl">Reserve un diagnostic de preparation B2/C1</h1>
+          <p class="max-w-2xl text-lg leading-8 text-ink/75">
+            Un premier echange pour clarifier votre niveau, votre objectif, votre echeance et la meilleure strategie de preparation.
+          </p>
+          <div class="surface-card p-8">
+            <ul class="space-y-3 leading-7 text-ink/75">
+              <li>Point sur votre situation actuelle</li>
+              <li>Analyse des priorites de progression</li>
+              <li>Orientation vers le format d accompagnement adapte</li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-3 sm:flex-row">
+            <a href="https://calendly.com/objectifb2espagnol/diagnostic" class="btn-primary">
+              Ouvrir Calendly dans un nouvel onglet
+            </a>
+            <a href={siteConfig.leadMagnetLandingPath} class="btn-secondary">
+              Telecharger le guide gratuit
+            </a>
+          </div>
+          <p class="text-sm leading-7 text-ink/60">
+            Si l agenda integre ne s affiche pas correctement, utilisez le lien direct de reservation ci-dessus.
+          </p>
+        </div>
+
+        <CalendlyEmbed />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

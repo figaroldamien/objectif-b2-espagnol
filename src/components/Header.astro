@@ -1,0 +1,54 @@
+---
+import { siteConfig, primaryCtas } from "@/lib/site";
+
+const pathname = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-40 border-b border-line/80 bg-sand/90 backdrop-blur">
+  <div class="container-shell flex items-center justify-between gap-4 py-4">
+    <a href="/" class="flex items-center gap-3">
+      <span class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-ink font-display text-lg text-white">B2</span>
+      <span class="text-sm font-semibold tracking-[0.16em] text-ink sm:text-base">OBJECTIF B2 ESPAGNOL</span>
+    </a>
+
+    <nav class="hidden items-center gap-6 lg:flex">
+      {
+        siteConfig.navigation.map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              "text-sm font-semibold text-ink/80 hover:text-accent",
+              pathname === item.href && "text-accent"
+            ]}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <a href={primaryCtas.diagnostic.href} class="btn-primary hidden sm:inline-flex">
+      {primaryCtas.diagnostic.label}
+    </a>
+  </div>
+
+  <div class="border-t border-line/70 lg:hidden">
+    <div class="container-shell flex gap-5 overflow-x-auto py-3 text-sm font-semibold text-ink/75">
+      {
+        [
+          { label: "Offre", href: "/cours/espagnol-certification" },
+          { label: "Methode", href: "/methode" },
+          { label: "Blog", href: "/blog" },
+          { label: "Contact", href: "/contact" }
+        ].map((item) => (
+          <a
+            href={item.href}
+            class:list={["whitespace-nowrap hover:text-accent", pathname === item.href && "text-accent"]}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</header>
