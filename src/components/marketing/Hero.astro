@@ -27,28 +27,17 @@ const {
     <div class="space-y-8">
       <div class="space-y-5">
         <p class="eyebrow">{eyebrow}</p>
-        <h1 class="max-w-3xl text-5xl leading-tight sm:text-6xl">{title}</h1>
+        <div class="inline-flex items-center gap-3 rounded-full border border-accent/20 bg-accent/10 px-4 py-2 text-sm font-semibold text-accent">
+          <span class="text-base">90%</span>
+          <span>de réussite sur les certifications accompagnées</span>
+        </div>
+        <h1 class="max-w-3xl text-4xl leading-tight sm:text-5xl">{title}</h1>
         <p class="max-w-2xl text-lg leading-8 text-ink/75">{description}</p>
       </div>
 
       <div class="flex flex-col gap-3 sm:flex-row">
         <a href={primaryHref} class="btn-primary">{primaryLabel}</a>
         <a href={secondaryHref} class="btn-secondary">{secondaryLabel}</a>
-      </div>
-
-      <div class="grid gap-4 border-t border-line pt-6 sm:grid-cols-3">
-        <div>
-          <p class="text-3xl font-semibold text-ink">90%</p>
-          <p class="mt-1 text-sm text-ink/65">de réussite sur les certifications accompagnées</p>
-        </div>
-        <div>
-          <p class="text-3xl font-semibold text-ink">8 a 12</p>
-          <p class="mt-1 text-sm text-ink/65">semaines pour un plan de préparation ciblé</p>
-        </div>
-        <div>
-          <p class="text-3xl font-semibold text-ink">1 méthode</p>
-          <p class="mt-1 text-sm text-ink/65">claire, logique, rassurante et orientée résultat</p>
-        </div>
       </div>
     </div>
 

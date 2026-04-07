@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Hero from "@/components/marketing/Hero.astro";
-import ProofBar from "@/components/marketing/ProofBar.astro";
 import CTAFooter from "@/components/marketing/CTAFooter.astro";
 import NewsletterForm from "@/components/NewsletterForm.astro";
 import ArticleCard from "@/components/marketing/ArticleCard.astro";
@@ -24,14 +23,16 @@ const testimonials = sortTestimonials(
   schema={[organizationSchema(), personSchema()]}
 >
   <Hero
-    title="La méthode structurée pour atteindre le niveau B2/C1 en espagnol et réussir votre certification."
+    title="Une méthode structurée pour atteindre le niveau B2/C1 en espagnol et réussir votre certification."
     description="Un accompagnement clair, rassurant et orienté résultat pour les étudiants qui ont une échéance, veulent un plan précis et ne peuvent plus perdre du temps."
   />
 
-  <ProofBar />
-
   <section class="section-gap pt-8">
-    <div class="container-shell grid gap-6 lg:grid-cols-3">
+    <div class="container-shell">
+      <div class="mb-8 max-w-3xl space-y-3">
+        <h2 class="text-4xl">Ce que cette préparation change pour vous</h2>
+      </div>
+      <div class="grid gap-6 lg:grid-cols-3">
       <div class="surface-card p-8">
         <p class="eyebrow">Pour qui</p>
         <h2 class="mt-3 text-3xl">Vous avez un objectif concret et une date.</h2>
@@ -48,31 +49,31 @@ const testimonials = sortTestimonials(
       </div>
       <div class="surface-card p-8">
         <p class="eyebrow">La différence</p>
-        <h2 class="mt-3 text-3xl">Une pédagogie logique, simple et rassurante.</h2>
+        <h2 class="mt-3 text-3xl">Une méthode claire pour réussir votre certification.</h2>
         <p class="mt-4 leading-7 text-ink/75">
           L'approche vient d'un parcours atypique d'ancienne professeure de mathématiques au Chili: beaucoup de structure, peu de flou, des explications faciles à appliquer.
         </p>
       </div>
     </div>
+    </div>
   </section>
 
   <section class="section-gap">
-    <div class="container-shell grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">
-      <div class="space-y-4">
-        <p class="eyebrow">La méthode</p>
-        <h2 class="text-4xl">Une progression claire en 4 étapes</h2>
+    <div class="container-shell">
+      <div class="mb-10 max-w-3xl space-y-4">
+        <h2 class="text-4xl">Ce que vous travaillez vraiment pour réussir</h2>
         <p class="text-lg leading-8 text-ink/75">
-          Tout est pensé pour transformer une préparation confuse en plan exécutable.
+          L’objectif n’est pas de tout revoir. L’objectif est de travailler ce qui fait réellement progresser un candidat vers le B2/C1.
         </p>
       </div>
-      <div class="grid gap-4">
+      <div class="mx-auto grid max-w-5xl gap-4 sm:grid-cols-2">
         {[
-          ["1. Diagnostic", "Nous évaluons le niveau réel, la date cible et les points qui freinent la progression."],
-          ["2. Priorisation", "Vous repartez avec un plan simple : quoi travailler, dans quel ordre et avec quelles attentes."],
-          ["3. Entraînement ciblé", "Oral, écrit, compréhension et structures utiles sont pratiqués sur des formats proches de l’examen."],
-          ["4. Simulation", "Des retours précis vous permettent d'ajuster avant la certification et de gagner en confiance."]
+          ["Comprendre les attentes de l’examen", "Vous savez ce qui est vraiment évalué, ce qui compte dans la correction et où concentrer vos efforts."],
+          ["Renforcer l’oral et l’écrit utile", "Vous travaillez les formats, les structures et les réflexes qui servent réellement le jour de l’examen."],
+          ["Corriger les blocages qui freinent le passage à B2", "On cible les erreurs récurrentes, le manque de précision et les points qui empêchent une expression plus solide."],
+          ["Gagner en confiance avec un cadre clair", "Vous avancez avec un plan simple, des priorités nettes et des retours précis pour savoir où vous en êtes."]
         ].map(([title, text]) => (
-          <div class="surface-card p-6">
+          <div class="surface-card h-full p-6">
             <h3 class="text-2xl">{title}</h3>
             <p class="mt-3 leading-7 text-ink/75">{text}</p>
           </div>
@@ -116,7 +117,7 @@ const testimonials = sortTestimonials(
     <div class="container-shell">
       <div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div class="space-y-2">
-          <p class="eyebrow">Blog SEO</p>
+          <p class="eyebrow">Blog</p>
           <h2 class="text-4xl">Des contenus pensés pour attirer, rassurer et convertir</h2>
         </div>
         <a href="/blog" class="btn-secondary">Voir tous les articles</a>

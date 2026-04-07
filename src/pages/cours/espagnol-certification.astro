@@ -80,19 +80,24 @@ const schema = [
   </section>
 
   <section class="section-gap">
-    <div class="container-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-      <div class="space-y-3">
+    <div class="container-shell">
+      <div class="mb-10 max-w-3xl space-y-3">
         <p class="eyebrow">Résultats attendus</p>
         <h2 class="text-4xl">Vous avancez avec des priorités nettes</h2>
+        <p class="text-lg leading-8 text-ink/75">
+          L’objectif n’est pas de multiplier les exercices. L’objectif est de travailler ce qui vous fait progresser de manière utile avant l’examen.
+        </p>
       </div>
-      <div class="grid gap-4">
+      <div class="mx-auto grid max-w-5xl gap-4 sm:grid-cols-2">
         {[
           "Comprendre la structure de l’examen et les critères qui comptent.",
           "Renforcer l’oral et l’écrit avec des exercices utiles plutôt que dispersés.",
           "Corriger les faiblesses récurrentes qui bloquent le passage de B1 à B2.",
           "Gagner en confiance avec des simulations et du feedback précis."
         ].map((item) => (
-          <div class="surface-card p-6"><p class="leading-7 text-ink/75">{item}</p></div>
+          <div class="surface-card h-full p-6">
+            <p class="leading-7 text-ink/75">{item}</p>
+          </div>
         ))}
       </div>
     </div>
@@ -142,7 +147,7 @@ const schema = [
   <section class="section-gap bg-white/40">
     <div class="container-shell">
       <div class="mb-8 space-y-3">
-        <p class="eyebrow">Preuve sociale</p>
+        <p class="eyebrow">Témoignages</p>
         <h2 class="text-4xl">90% de réussite et des retours très concrets</h2>
       </div>
       <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
