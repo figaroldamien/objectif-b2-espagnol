@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import CTAFooter from "@/components/marketing/CTAFooter.astro";
 import { breadcrumbSchema, personSchema } from "@/lib/schema";
 ---
@@ -19,26 +18,26 @@ import { breadcrumbSchema, personSchema } from "@/lib/schema";
 >
   <section class="section-gap">
     <div class="container-shell">
-      <Breadcrumbs items={[{ label: "À propos", href: "/a-propos" }]} />
-      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-        <div class="surface-card p-8">
-          <p class="eyebrow">Profil</p>
-          <h1 class="mt-3 text-4xl">Une approche structurée, claire et rassurante</h1>
-          <p class="mt-4 leading-7 text-ink/75">
-            Avant d’enseigner l’espagnol en ligne, la fondatrice a été professeure de mathématiques au Chili. Cette expérience a façonné une pédagogie très logique : simplifier, ordonner, faire progresser sans confusion.
-          </p>
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <div class="surface-card relative overflow-hidden p-8">
+          <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-r from-accent/10 via-gold/10 to-transparent"></div>
+          <div class="relative">
+            <h1 class="text-4xl">Une approche structurée, claire et rassurante</h1>
+            <p class="mt-4 leading-7 text-ink/75">
+              Avant d’enseigner l’espagnol en ligne, la fondatrice a été professeure de mathématiques au Chili. Cette expérience a façonné une pédagogie très logique : simplifier, ordonner, faire progresser sans confusion.
+            </p>
+          </div>
         </div>
         <div class="space-y-6 text-lg leading-8 text-ink/75">
           <p>
-            Aujourd’hui, l’accompagnement se concentre en priorité sur les candidats qui ont besoin d’atteindre le niveau B2/C1 pour une certification, des études à l’étranger ou un objectif académique clair.
+            Mon accompagnement se concentre en priorité sur les candidats qui ont besoin d’atteindre le niveau B2/C1 pour une certification, des études à l’étranger ou un objectif académique clair. Je sais précisément ce qui est attendu à l’examen.
           </p>
           <p>
-            L’idée n’est pas de tout enseigner. L’idée est de faire travailler les bons leviers, dans le bon ordre, avec une méthode simple à appliquer. C’est ce qui permet de rassurer et d’avancer vite.
+            Il ne s’agit pas de tout enseigner. Il s’agit de faire travailler les leviers qui permettent de réussir, dans le bon ordre, avec une méthode simple à appliquer. C’est ce qui permet de rassurer et d’avancer vite.
           </p>
           <p>
-            L’offre s’appuie sur trois convictions : un cadre clair réduit le stress, une priorisation intelligente fait gagner du temps, et des retours précis transforment vraiment les résultats.
+            Ma démarche s’appuie sur trois convictions : un cadre clair réduit le stress, une priorisation intelligente fait gagner du temps, et des retours précis transforment vraiment les résultats.
           </p>
-          <a href="/contact" class="btn-primary">Réserver un diagnostic</a>
         </div>
       </div>
     </div>

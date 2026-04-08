@@ -12,7 +12,7 @@ type Props = {
 };
 
 const {
-  eyebrow = "Préparation certification espagnol",
+  eyebrow,
   title,
   description,
   primaryLabel = primaryCtas.diagnostic.label,
@@ -26,12 +26,12 @@ const {
   <div class="container-shell grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
     <div class="space-y-8">
       <div class="space-y-5">
-        <p class="eyebrow">{eyebrow}</p>
-        <div class="inline-flex items-center gap-3 rounded-full border border-accent/20 bg-accent/10 px-4 py-2 text-sm font-semibold text-accent">
-          <span class="text-base">90%</span>
+        {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+        <div class="inline-flex items-center gap-3 rounded-full border border-accent/20 bg-white px-4 py-2 text-sm font-bold text-accent shadow-soft">
+          <span class="text-lg">90%</span>
           <span>de réussite sur les certifications accompagnées</span>
         </div>
-        <h1 class="max-w-3xl text-4xl leading-tight sm:text-5xl">{title}</h1>
+        <h1 class="max-w-3xl text-4xl leading-[1.04] sm:text-[3.2rem] lg:text-[3.8rem]">{title}</h1>
         <p class="max-w-2xl text-lg leading-8 text-ink/75">{description}</p>
       </div>
 
@@ -41,17 +41,34 @@ const {
       </div>
     </div>
 
-    <div class="surface-card p-8 sm:p-10">
-      <div class="space-y-6">
-        <div class="inline-flex rounded-full bg-accent/10 px-4 py-2 text-sm font-semibold text-accent">
-          Programme Objectif B2 en 8 à 12 semaines
+    <div class="surface-card relative overflow-hidden p-8 sm:p-10">
+      <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-r from-accent/10 via-gold/10 to-transparent"></div>
+      <div class="relative space-y-6">
+        <div class="flex items-start justify-between gap-6">
+          <div class="inline-flex rounded-full bg-ink px-4 py-2 text-sm font-bold text-white">
+            Programme Objectif B2 en 8 à 12 semaines
+          </div>
+          <img
+            src="/images/brand/target-arrow.svg"
+            alt=""
+            class="hidden h-20 w-20 shrink-0 md:block"
+          />
         </div>
         <div class="space-y-4">
-          <h2 class="text-3xl">Une préparation simple à suivre, même avec une échéance proche</h2>
-          <ul class="space-y-3 text-base leading-7 text-ink/75">
-            <li>Diagnostic initial pour identifier les points qui bloquent vraiment.</li>
-            <li>Plan d’action personnalisé selon votre niveau, votre date et votre examen cible.</li>
-            <li>Préparation écrite et orale avec simulations et feedback précis.</li>
+          <h2 class="text-3xl">Une préparation claire, visuelle et rassurante</h2>
+          <ul class="space-y-4 text-base leading-7 text-ink/75">
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 rounded-full bg-accent"></span>
+              <span>Diagnostic initial pour identifier les points qui bloquent vraiment.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 rounded-full bg-sun"></span>
+              <span>Plan d’action personnalisé selon votre niveau, votre date et votre examen cible.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 rounded-full bg-ink"></span>
+              <span>Préparation écrite et orale avec simulations et feedback précis.</span>
+            </li>
           </ul>
         </div>
       </div>

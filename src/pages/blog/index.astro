@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import ArticleCard from "@/components/marketing/ArticleCard.astro";
 import NewsletterForm from "@/components/NewsletterForm.astro";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -21,11 +20,10 @@ const posts = sortBlogPosts(await getCollection("blog", ({ data }) => !data.draf
 >
   <section class="section-gap">
     <div class="container-shell">
-      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }]} />
-      <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
+      <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <div class="space-y-5">
           <p class="eyebrow">Blog</p>
-          <h1 class="text-5xl">Le blog pour structurer votre progression vers le B2/C1</h1>
+          <h1 class="text-5xl lg:text-6xl">Le blog pour structurer votre progression vers le B2/C1</h1>
           <p class="max-w-3xl text-lg leading-8 text-ink/75">
             Des articles centrés sur la certification, la méthode, l’oral, la grammaire utile et les vraies priorités de progression.
           </p>
@@ -36,8 +34,14 @@ const posts = sortBlogPosts(await getCollection("blog", ({ data }) => !data.draf
   </section>
 
   <section class="section-gap pt-2">
-    <div class="container-shell grid gap-6 lg:grid-cols-3">
-      {posts.map((post) => <ArticleCard post={post} />)}
+    <div class="container-shell">
+      <div class="mb-8 max-w-3xl space-y-3">
+        <p class="eyebrow">À lire en priorité</p>
+        <h2 class="text-4xl">Des contenus concrets pour progresser avec méthode</h2>
+      </div>
+      <div class="grid gap-6 lg:grid-cols-3">
+        {posts.map((post) => <ArticleCard post={post} />)}
+      </div>
     </div>
   </section>
 </BaseLayout>

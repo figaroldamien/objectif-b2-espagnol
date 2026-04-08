@@ -6,18 +6,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        sand: "#F7F1E8",
-        ink: "#1F2A37",
-        accent: "#B45309",
-        olive: "#566246",
-        line: "#E5D8C7"
+        sand: "#F4F4F4",
+        ink: "#1D3557",
+        accent: "#E63946",
+        gold: "#F1C40F",
+        sun: "#F49E1A",
+        line: "#D7DFEA"
       },
       fontFamily: {
-        sans: ["'Source Sans 3'", "system-ui", "sans-serif"],
-        display: ["'Fraunces'", "Georgia", "serif"]
+        sans: ["'Open Sans'", "system-ui", "sans-serif"],
+        display: ["'Montserrat'", "'Open Sans'", "system-ui", "sans-serif"]
       },
       boxShadow: {
-        card: "0 18px 45px rgba(31, 42, 55, 0.08)"
+        card: "0 18px 40px rgba(29, 53, 87, 0.10)",
+        soft: "0 8px 24px rgba(29, 53, 87, 0.08)"
       },
       maxWidth: {
         prose: "72ch"

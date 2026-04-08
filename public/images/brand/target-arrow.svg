@@ -1,0 +1,31 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="targetArrowTitle targetArrowDesc">
+  <title id="targetArrowTitle">Cible avec flèche Objectif B2 Espagnol</title>
+  <desc id="targetArrowDesc">Icône de cible concentrique avec une flèche plantée au centre.</desc>
+  <defs>
+    <filter id="shadow" x="18" y="24" width="220" height="208" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#1D3557" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="124" cy="210" rx="72" ry="16" fill="#1D3557" opacity="0.10"/>
+
+  <g filter="url(#shadow)">
+    <circle cx="112" cy="128" r="82" fill="#1D3557"/>
+    <circle cx="112" cy="128" r="68" fill="#F4F4F4"/>
+    <circle cx="112" cy="128" r="51" fill="#E63946"/>
+    <circle cx="112" cy="128" r="33" fill="#F1C40F"/>
+    <circle cx="112" cy="128" r="15" fill="#1D3557"/>
+
+    <g>
+      <path d="M164 66L124 106" stroke="#1D3557" stroke-width="11" stroke-linecap="round"/>
+      <path d="M112 128L123 105L132 116L112 128Z" fill="#1D3557"/>
+      <path d="M164 66L183 57L177 77L164 66Z" fill="#E63946"/>
+      <path d="M158 53L173 57L162 71L158 53Z" fill="#E63946"/>
+      <path d="M172 79L188 74L184 90L172 79Z" fill="#E63946"/>
+      <path d="M164 66L176 58" stroke="#F4F4F4" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M171 78L183 74" stroke="#F4F4F4" stroke-width="3.5" stroke-linecap="round"/>
+    </g>
+
+    <circle cx="112" cy="128" r="4.5" fill="#F4F4F4" stroke="#C9D1DD" stroke-width="1.5"/>
+  </g>
+</svg>
