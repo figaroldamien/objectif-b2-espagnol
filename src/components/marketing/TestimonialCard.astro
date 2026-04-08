@@ -9,13 +9,21 @@ type Props = {
 const { name, goal, result, quote } = Astro.props;
 ---
 
-<article class="surface-card h-full p-7">
-  <div class="space-y-4">
-    <p class="text-base leading-7 text-ink/80">"{quote}"</p>
-    <div class="border-t border-line pt-4">
-      <p class="font-semibold text-ink">{name}</p>
-      <p class="text-sm text-ink/60">{goal}</p>
-      <p class="mt-2 text-sm font-semibold text-accent">{result}</p>
+<article class="surface-card flex h-full flex-col gap-5 overflow-hidden p-7">
+  <div class="flex items-start justify-between gap-4">
+    <div class="space-y-1">
+      <p class="font-bold text-ink">{name}</p>
+      <p class="text-sm leading-6 text-ink/60">{goal}</p>
     </div>
+    <span class="brand-ring mt-1 h-9 w-9 shrink-0 rounded-full"></span>
+  </div>
+
+  <blockquote class="border-l-4 border-accent pl-4 text-base leading-7 text-ink/80">
+    "{quote}"
+  </blockquote>
+
+  <div class="mt-auto border-t border-line pt-4">
+    <p class="text-sm font-bold uppercase tracking-[0.14em] text-accent">Ce que l’accompagnement a apporté</p>
+    <p class="mt-2 leading-7 text-ink/75">{result}</p>
   </div>
 </article>

@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import NewsletterForm from "@/components/NewsletterForm.astro";
 import { breadcrumbSchema } from "@/lib/schema";
 ---
@@ -16,11 +15,13 @@ import { breadcrumbSchema } from "@/lib/schema";
 >
   <section class="section-gap">
     <div class="container-shell">
-      <Breadcrumbs items={[{ label: "Guide B2", href: "/ressources/guide-b2" }]} />
       <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <div class="space-y-6">
           <p class="eyebrow">Guide gratuit</p>
-          <h1 class="text-5xl">Checklist ultime pour réussir le B2 espagnol</h1>
+          <div class="inline-flex items-center gap-3 rounded-full border border-accent/20 bg-white px-4 py-2 text-sm font-bold text-accent shadow-soft">
+            <span>Ressource offerte</span>
+          </div>
+          <h1 class="text-5xl lg:text-6xl">Checklist ultime pour réussir le B2 espagnol</h1>
           <p class="max-w-3xl text-lg leading-8 text-ink/75">
             Une ressource simple pour vérifier que votre préparation est bien focalisée sur les compétences, les critères et les priorités qui comptent vraiment.
           </p>
@@ -32,10 +33,19 @@ import { breadcrumbSchema } from "@/lib/schema";
               Réserver un diagnostic
             </a>
           </div>
-          <ul class="space-y-3 leading-7 text-ink/75">
-            <li>Ce qu’il faut maîtriser avant le jour J.</li>
-            <li>Les erreurs les plus fréquentes chez les candidats B2.</li>
-            <li>Une grille pratique pour savoir si votre plan est assez structuré.</li>
+          <ul class="space-y-4 leading-7 text-ink/75">
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 rounded-full bg-accent"></span>
+              <span>Ce qu’il faut maîtriser avant le jour J.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 rounded-full bg-sun"></span>
+              <span>Les erreurs les plus fréquentes chez les candidats B2.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 rounded-full bg-ink"></span>
+              <span>Une grille pratique pour savoir si votre plan est assez structuré.</span>
+            </li>
           </ul>
         </div>
         <NewsletterForm source="landing-guide-b2" />

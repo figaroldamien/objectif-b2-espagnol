@@ -7,17 +7,20 @@ const pathname = Astro.url.pathname;
 <header class="sticky top-0 z-40 border-b border-line/80 bg-sand/90 backdrop-blur">
   <div class="container-shell flex items-center justify-between gap-4 py-4">
     <a href="/" class="flex items-center gap-3">
-      <span class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-ink font-display text-lg text-white">B2</span>
-      <span class="text-sm font-semibold tracking-[0.16em] text-ink sm:text-base">OBJECTIF B2 ESPAGNOL</span>
+      <img
+        src="/images/brand/logo-objectif-b2-espagnol.svg"
+        alt="Objectif B2 Espagnol"
+        class="h-12 w-auto sm:h-14"
+      />
     </a>
 
-    <nav class="hidden items-center gap-6 lg:flex">
+    <nav class="hidden items-center gap-7 lg:flex">
       {
         siteConfig.navigation.map((item) => (
           <a
             href={item.href}
             class:list={[
-              "text-sm font-semibold text-ink/80 hover:text-accent",
+              "text-sm font-bold text-ink/80 hover:text-accent",
               pathname === item.href && "text-accent"
             ]}
           >
@@ -32,8 +35,8 @@ const pathname = Astro.url.pathname;
     </a>
   </div>
 
-  <div class="border-t border-line/70 lg:hidden">
-    <div class="container-shell flex gap-5 overflow-x-auto py-3 text-sm font-semibold text-ink/75">
+  <div class="border-t border-line/70 bg-white/70 lg:hidden">
+    <div class="container-shell flex gap-5 overflow-x-auto py-3 text-sm font-bold text-ink/75">
       {
         [
           { label: "Préparation B2/C1", href: "/cours/espagnol-certification" },

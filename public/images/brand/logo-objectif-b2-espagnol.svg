@@ -1,0 +1,47 @@
+<svg width="1000" height="440" viewBox="0 0 1000 440" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Logo Objectif B2 Espagnol</title>
+  <desc id="logoDesc">Logo texte Objectif B2 Espagnol avec une cible et une flèche, accompagné d'une baseline sur la réussite de la certification.</desc>
+  <g>
+    <text x="170" y="150" fill="#1D3557" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="112" letter-spacing="-2">
+      Objectif
+    </text>
+
+    <text x="175" y="255" fill="#E63946" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="106" letter-spacing="-3">
+      B2
+    </text>
+
+    <g transform="translate(305 182)">
+      <path d="M0 4H332L322 86H0V4Z" fill="#F49E1A"/>
+      <path d="M0 4H332" stroke="#F6B84D" stroke-width="8" stroke-linecap="round"/>
+      <text x="18" y="62" fill="white" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="60" letter-spacing="-1">
+        ESPAGNOL
+      </text>
+    </g>
+
+    <g transform="translate(620 92)">
+      <circle cx="108" cy="116" r="92" fill="#1D3557"/>
+      <circle cx="108" cy="116" r="76" fill="#F4F4F4"/>
+      <circle cx="108" cy="116" r="58" fill="#E63946"/>
+      <circle cx="108" cy="116" r="38" fill="#F1C40F"/>
+      <circle cx="108" cy="116" r="18" fill="#1D3557"/>
+
+      <g>
+        <path d="M162 58L121 99" stroke="#1D3557" stroke-width="12" stroke-linecap="round"/>
+        <path d="M108 116L120 97L128 105L108 116Z" fill="#1D3557"/>
+        <path d="M162 58L182 48L176 69L162 58Z" fill="#E63946"/>
+        <path d="M156 44L172 48L160 63L156 44Z" fill="#E63946"/>
+        <path d="M171 71L188 66L184 83L171 71Z" fill="#E63946"/>
+        <path d="M162 58L175 49" stroke="#F4F4F4" stroke-width="4" stroke-linecap="round"/>
+        <path d="M169 71L183 67" stroke="#F4F4F4" stroke-width="4" stroke-linecap="round"/>
+      </g>
+
+      <circle cx="108" cy="116" r="4.5" fill="#F4F4F4" stroke="#C9D1DD" stroke-width="1.5"/>
+    </g>
+
+    <path d="M346 182H606" stroke="#F49E1A" stroke-width="7" stroke-linecap="round"/>
+
+    <text x="180" y="340" fill="#1D3557" font-family="Open Sans, Arial, sans-serif" font-weight="700" font-size="40">
+      Votre méthode pour réussir la certification
+    </text>
+  </g>
+</svg>

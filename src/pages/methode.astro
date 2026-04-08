@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import CTAFooter from "@/components/marketing/CTAFooter.astro";
 import { breadcrumbSchema } from "@/lib/schema";
 ---
@@ -16,10 +15,9 @@ import { breadcrumbSchema } from "@/lib/schema";
 >
   <section class="section-gap">
     <div class="container-shell">
-      <Breadcrumbs items={[{ label: "Méthode", href: "/methode" }]} />
       <div class="space-y-5">
         <p class="eyebrow">Méthode</p>
-        <h1 class="text-5xl">Une préparation plus claire, parce qu’elle est structurée</h1>
+        <h1 class="text-5xl lg:text-6xl">Une préparation plus claire, parce qu’elle est structurée</h1>
         <p class="max-w-3xl text-lg leading-8 text-ink/75">
           La méthode vise à retirer le flou : comprendre l’objectif, prioriser, entraîner les compétences utiles et simuler avant l’examen.
         </p>
@@ -27,12 +25,13 @@ import { breadcrumbSchema } from "@/lib/schema";
 
       <div class="mt-10 grid gap-6 lg:grid-cols-2">
         {[
-          ["Clarifier", "On part d’un diagnostic simple pour savoir où vous en êtes et ce qui compte pour votre objectif."],
-          ["Simplifier", "Les notions et exigences sont expliquées avec une logique facile à retenir et à réutiliser."],
-          ["Prioriser", "Chaque séance sert une progression. Vous savez quoi faire, pourquoi et dans quel ordre."],
-          ["Mesurer", "Des simulations et corrections détaillées permettent d’objectiver les progrès et d’ajuster."]
-        ].map(([title, text]) => (
+          ["Clarifier", "On part d’un diagnostic simple pour savoir où vous en êtes et ce qui compte pour votre objectif.", "bg-accent"],
+          ["Simplifier", "Les notions et exigences sont expliquées avec une logique facile à retenir et à réutiliser.", "bg-sun"],
+          ["Prioriser", "Chaque séance sert une progression. Vous savez quoi faire, pourquoi et dans quel ordre.", "bg-ink"],
+          ["Mesurer", "Des simulations et corrections détaillées permettent d’objectiver les progrès et d’ajuster.", "bg-gold"]
+        ].map(([title, text, tone]) => (
           <div class="surface-card p-8">
+            <span class:list={["mb-5 block h-1.5 w-16 rounded-full", tone]}></span>
             <h2 class="text-3xl">{title}</h2>
             <p class="mt-4 leading-7 text-ink/75">{text}</p>
           </div>

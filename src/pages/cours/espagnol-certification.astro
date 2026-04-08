@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import FAQList from "@/components/FAQList.astro";
 import CTAFooter from "@/components/marketing/CTAFooter.astro";
 import TestimonialCard from "@/components/marketing/TestimonialCard.astro";
@@ -36,12 +35,10 @@ const schema = [
 >
   <section class="section-gap">
     <div class="container-shell">
-      <Breadcrumbs items={[{ label: "Préparation B2/C1", href: "/cours/espagnol-certification" }]} />
-
-      <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+      <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <div class="space-y-6">
           <p class="eyebrow">Préparation B2/C1</p>
-          <h1 class="text-5xl">Programme Objectif B2 en 8 à 12 semaines</h1>
+          <h1 class="text-5xl lg:text-6xl">Programme Objectif B2 en 8 à 12 semaines</h1>
           <p class="max-w-3xl text-xl leading-8 text-ink/75">
             Pour les étudiants et jeunes adultes qui doivent valider un niveau B2/C1, avec une méthode claire, rassurante et orientée résultats.
           </p>
@@ -51,14 +48,38 @@ const schema = [
           </div>
         </div>
 
-        <div class="surface-card p-8">
-          <p class="text-sm uppercase tracking-[0.18em] text-ink/45">Ce que vous cherchez probablement</p>
-          <ul class="mt-5 space-y-4 leading-7 text-ink/75">
-            <li>Un plan clair plutôt qu’une accumulation d’exercices sans fil conducteur.</li>
-            <li>Un accompagnement pour savoir quoi travailler avant votre date limite.</li>
-            <li>Des retours concrets sur l’oral, l’écrit et les critères de correction.</li>
-            <li>Une préparation qui rassure et fait gagner du temps.</li>
-          </ul>
+        <div class="surface-card relative overflow-hidden p-8">
+          <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-r from-accent/10 via-gold/10 to-transparent"></div>
+          <div class="relative space-y-6">
+            <div class="flex items-start justify-between gap-6">
+              <div class="space-y-3">
+                <div class="inline-flex items-center gap-3 rounded-full border border-accent/20 bg-white px-4 py-2 text-sm font-bold text-accent shadow-soft">
+                  <span class="text-lg">90%</span>
+                  <span>de réussite sur les certifications accompagnées</span>
+                </div>
+                <p class="text-sm font-bold uppercase tracking-[0.18em] text-ink/55">Ce que vous cherchez probablement</p>
+              </div>
+              <img src="/images/brand/target-arrow.svg" alt="" class="hidden h-20 w-20 shrink-0 md:block" />
+            </div>
+            <ul class="space-y-4 leading-7 text-ink/75">
+              <li class="flex items-start gap-3">
+                <span class="mt-2 h-2.5 w-2.5 rounded-full bg-accent"></span>
+                <span>Un plan clair plutôt qu’une accumulation d’exercices sans fil conducteur.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-2 h-2.5 w-2.5 rounded-full bg-sun"></span>
+                <span>Un accompagnement pour savoir quoi travailler avant votre date limite.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-2 h-2.5 w-2.5 rounded-full bg-ink"></span>
+                <span>Des retours concrets sur l’oral, l’écrit et les critères de correction.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-2 h-2.5 w-2.5 rounded-full bg-gold"></span>
+                <span>Une préparation qui rassure et fait gagner du temps.</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -67,11 +88,12 @@ const schema = [
   <section class="section-gap pt-4">
     <div class="container-shell grid gap-6 md:grid-cols-3">
       {[
-        ["Le problème", "Vous avez une échéance et vous sentez que votre travail n’est pas assez structuré pour sécuriser le résultat."],
-        ["Pour qui", "Étudiants visant un DELE, un test d’admission ou une validation de niveau pour partir étudier à l’étranger."],
-        ["Résultat attendu", "Savoir exactement quoi faire chaque semaine et arriver à l’examen avec un cadre clair."]
-      ].map(([title, text]) => (
+        ["Le problème", "Vous avez une échéance et vous sentez que votre travail n’est pas assez structuré pour sécuriser le résultat.", "bg-accent"],
+        ["Pour qui", "Étudiants visant un DELE, un test d’admission ou une validation de niveau pour partir étudier à l’étranger.", "bg-sun"],
+        ["Résultat attendu", "Savoir exactement quoi faire chaque semaine et arriver à l’examen avec un cadre clair.", "bg-ink"]
+      ].map(([title, text, tone]) => (
         <div class="surface-card p-7">
+          <span class:list={["mb-5 block h-1.5 w-16 rounded-full", tone]}></span>
           <h2 class="text-2xl">{title}</h2>
           <p class="mt-3 leading-7 text-ink/75">{text}</p>
         </div>
@@ -79,7 +101,7 @@ const schema = [
     </div>
   </section>
 
-  <section class="section-gap">
+  <section class="section-gap bg-white/50">
     <div class="container-shell">
       <div class="mb-10 max-w-3xl space-y-3">
         <p class="eyebrow">Résultats attendus</p>
@@ -103,7 +125,7 @@ const schema = [
     </div>
   </section>
 
-  <section class="section-gap bg-white/40">
+  <section class="section-gap">
     <div class="container-shell">
       <div class="mb-8 space-y-3">
         <p class="eyebrow">Méthode</p>
@@ -125,26 +147,36 @@ const schema = [
     </div>
   </section>
 
-  <section class="section-gap">
-    <div class="container-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-      <div class="space-y-3">
+  <section class="section-gap bg-white/50">
+    <div class="container-shell">
+      <div class="mb-8 max-w-3xl space-y-3">
         <p class="eyebrow">Inclus</p>
         <h2 class="text-4xl">Ce que comprend le programme</h2>
+        <p class="text-lg leading-8 text-ink/75">
+          Un accompagnement pensé pour vous faire avancer avec méthode, sans vous perdre dans des contenus secondaires.
+        </p>
       </div>
       <div class="surface-card p-8">
         <ul class="grid gap-4 leading-7 text-ink/75 sm:grid-cols-2">
-          <li>Diagnostic individuel</li>
-          <li>Plan de travail personnalisé</li>
-          <li>Cours individuels ou petit groupe</li>
-          <li>Préparation de l’oral et de l’écrit</li>
-          <li>Simulations d’examen</li>
-          <li>Suivi et feedback précis</li>
+          {[
+            "Diagnostic individuel",
+            "Plan de travail personnalisé",
+            "Cours individuels ou petit groupe",
+            "Préparation de l’oral et de l’écrit",
+            "Simulations d’examen",
+            "Suivi et feedback précis"
+          ].map((item) => (
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 rounded-full bg-accent"></span>
+              <span>{item}</span>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
   </section>
 
-  <section class="section-gap bg-white/40">
+  <section class="section-gap">
     <div class="container-shell">
       <div class="mb-8 space-y-3">
         <p class="eyebrow">Témoignages</p>

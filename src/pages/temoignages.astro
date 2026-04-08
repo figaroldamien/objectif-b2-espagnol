@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import CTAFooter from "@/components/marketing/CTAFooter.astro";
 import TestimonialCard from "@/components/marketing/TestimonialCard.astro";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -21,10 +20,9 @@ const testimonials = sortTestimonials(await getCollection("testimonials"));
 >
   <section class="section-gap">
     <div class="container-shell">
-      <Breadcrumbs items={[{ label: "Témoignages", href: "/temoignages" }]} />
       <div class="space-y-5">
         <p class="eyebrow">Témoignages</p>
-        <h1 class="text-5xl">Des progrès concrets, une préparation plus sereine</h1>
+        <h1 class="text-5xl lg:text-6xl">Des progrès concrets, une préparation plus sereine</h1>
         <p class="max-w-3xl text-lg leading-8 text-ink/75">
           Les retours ci-dessous illustrent le type d’accompagnement proposé : une méthode claire, un meilleur cadrage et des résultats plus solides à l’examen.
         </p>

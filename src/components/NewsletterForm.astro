@@ -16,8 +16,10 @@ const {
 } = Astro.props;
 ---
 
-<div id="telecharger-guide" class:list={["surface-card", compact ? "p-6" : "p-8 sm:p-10"]}>
-  <div class="space-y-3">
+<div id="telecharger-guide" class:list={["surface-card relative overflow-hidden", compact ? "p-6" : "p-8 sm:p-10"]}>
+  <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-r from-gold/14 via-accent/8 to-transparent"></div>
+  <div class="relative space-y-3">
+    <p class="eyebrow">Guide gratuit</p>
     <h2 class="text-2xl sm:text-3xl">{title}</h2>
     <p class="max-w-2xl text-base leading-7 text-ink/75">{description}</p>
   </div>
@@ -25,7 +27,7 @@ const {
   <form
     action={siteConfig.newsletterFormAction}
     method="POST"
-    class="mt-6 grid gap-3 sm:grid-cols-[1fr_auto]"
+    class="relative mt-6 grid gap-3 sm:grid-cols-[1fr_auto]"
   >
     <input type="hidden" name="_subject" value={`Nouvelle demande de guide B2 - ${source}`} />
     <input

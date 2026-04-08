@@ -1,7 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import CTAInline from "@/components/marketing/CTAInline.astro";
 import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { formatDate } from "@/lib/content";
@@ -38,15 +37,21 @@ const schema = [
 >
   <section class="section-gap pb-10">
     <div class="container-shell max-w-4xl">
-      <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: post.data.title, href: `/blog/${post.slug}` }]} />
-
-      <header class="space-y-5">
-        <p class="eyebrow">{post.data.category}</p>
+      <header class="relative overflow-hidden rounded-[32px] border border-line bg-white p-8 shadow-card sm:p-10">
+        <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-r from-accent/10 via-gold/10 to-transparent"></div>
+        <div class="relative space-y-5">
+        <div class="flex flex-wrap items-center gap-3">
+          <p class="eyebrow">{post.data.category}</p>
+          <span class="inline-flex rounded-full bg-ink/6 px-3 py-1 text-xs font-bold text-ink">
+            Article de blog
+          </span>
+        </div>
         <h1 class="text-4xl sm:text-5xl">{post.data.title}</h1>
         <p class="max-w-3xl text-lg leading-8 text-ink/75">{post.data.description}</p>
         <div class="flex flex-wrap gap-3 text-sm text-ink/55">
           <span>Publié le {formatDate(post.data.publishDate)}</span>
           {post.data.updatedDate && <span>Mis à jour le {formatDate(post.data.updatedDate)}</span>}
+        </div>
         </div>
       </header>
 
@@ -55,12 +60,12 @@ const schema = [
           <img
             src={post.data.heroImage}
             alt=""
-            class="mt-8 w-full rounded-[2rem] border border-line object-cover"
+            class="mt-8 w-full rounded-[2rem] border border-line object-cover shadow-soft"
           />
         )
       }
 
-      <article class="prose-brand mt-10">
+      <article class="prose-brand mt-10 rounded-[28px] border border-line bg-white p-8 shadow-soft sm:p-10">
         <slot />
       </article>
 
