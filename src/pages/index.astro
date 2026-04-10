@@ -23,86 +23,74 @@ const testimonials = sortTestimonials(
   schema={[organizationSchema(), personSchema()]}
 >
   <Hero
-    title="Une méthode structurée pour atteindre le niveau B2/C1 en espagnol et réussir votre certification."
-    description="Un accompagnement clair, rassurant et orienté résultat pour les étudiants qui ont une échéance, veulent un plan précis et ne peuvent plus perdre du temps."
+    title="Réussir votre certification d’espagnol B2/C1 avec une méthode structurée et éprouvée."
+    description="Un accompagnement structuré pour les étudiants qui veulent obtenir une certification en espagnol et savoir exactement quoi travailler pour progresser sans se disperser."
+    showPanel={false}
   />
 
   <section class="section-gap pt-8">
     <div class="container-shell">
       <div class="mb-8 max-w-3xl space-y-3">
-        <p class="eyebrow">Pourquoi cette préparation aide vraiment</p>
-        <h2 class="text-4xl">Ce que cette préparation change pour vous</h2>
-        <p class="text-lg leading-8 text-ink/75">
-          L’idée n’est pas de travailler plus. L’idée est d’avancer avec plus de clarté, moins de dispersion et un objectif vraiment maîtrisé.
-        </p>
+        <p class="eyebrow">Pour qui</p>
+        <h2 class="text-4xl">Cette préparation est faite pour vous si...</h2>
       </div>
       <div class="grid gap-6 lg:grid-cols-3">
         {[
-          ["Pour qui", "Vous avez un objectif concret et une date.", "Cette préparation est pensée pour les étudiants et jeunes adultes qui doivent valider un niveau B2/C1 pour partir étudier à l’étranger ou obtenir une certification.", "bg-accent"],
-          ["Le vrai problème", "Vous travaillez beaucoup, mais sans savoir quoi prioriser.", "Le manque de méthode fait perdre du temps. Nous clarifions les compétences à travailler, l’ordre de progression et les critères qui comptent à l’examen.", "bg-sun"],
-          ["La différence", "Une méthode claire pour réussir votre certification.", "L’approche vient d’un parcours atypique d’ancienne professeure de mathématiques au Chili : beaucoup de structure, peu de flou, des explications faciles à appliquer.", "bg-ink"]
-        ].map(([label, title, text, tone]) => (
+          ["Vous voulez obtenir une certification en espagnol", "Vous préparez un niveau B2/C1 pour un projet d’études, un dossier ou un objectif personnel précis.", "bg-accent"],
+          ["Vous ne savez pas quoi travailler en priorité", "Vous avez déjà commencé à réviser, mais vous manquez de repères clairs sur ce qui compte vraiment pour réussir.", "bg-sun"],
+          ["Vous avez besoin d’un cadre rassurant", "Vous cherchez une méthode structurée, simple à suivre et adaptée à votre niveau de départ.", "bg-ink"]
+        ].map(([title, text, tone]) => (
           <div class="surface-card p-8">
             <span class:list={["mb-5 block h-1.5 w-16 rounded-full", tone]}></span>
-            <p class="eyebrow">{label}</p>
-            <h2 class="mt-3 text-3xl">{title}</h2>
+            <h3 class="text-3xl">{title}</h3>
             <p class="mt-4 leading-7 text-ink/75">{text}</p>
           </div>
         ))}
       </div>
+      <p class="mt-8 max-w-3xl text-lg leading-8 text-ink/75">
+        L’objectif est d’optimiser votre effort : travailler ce qui compte vraiment, dans le bon ordre, avec un cadre clair et des repères précis.
+      </p>
     </div>
   </section>
 
   <section class="section-gap bg-white/50">
     <div class="container-shell">
-      <div class="mb-10 max-w-3xl space-y-4">
-        <p class="eyebrow">Travail ciblé</p>
-        <h2 class="text-4xl">Ce que vous travaillez vraiment pour réussir</h2>
-        <p class="text-lg leading-8 text-ink/75">
-          L’objectif n’est pas de tout revoir. L’objectif est de travailler ce qui fait réellement progresser un candidat vers le B2/C1.
-        </p>
-      </div>
-      <div class="mx-auto grid max-w-5xl gap-4 sm:grid-cols-2">
-        {[
-          ["Comprendre les attentes de l’examen", "Vous savez ce qui est vraiment évalué, ce qui compte dans la correction et où concentrer vos efforts."],
-          ["Renforcer l’oral et l’écrit utile", "Vous travaillez les formats, les structures et les réflexes qui servent réellement le jour de l’examen."],
-          ["Corriger les blocages qui freinent le passage à B2", "On cible les erreurs récurrentes, le manque de précision et les points qui empêchent une expression plus solide."],
-          ["Gagner en confiance avec un cadre clair", "Vous avancez avec un plan simple, des priorités nettes et des retours précis pour savoir où vous en êtes."]
-        ].map(([title, text]) => (
-          <div class="surface-card h-full p-6">
-            <h3 class="text-2xl">{title}</h3>
-            <p class="mt-3 leading-7 text-ink/75">{text}</p>
+      <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+        <div class="max-w-3xl space-y-4">
+          <p class="eyebrow">Programme</p>
+          <h2 class="text-4xl">Comment se passe la préparation</h2>
+          <p class="text-lg leading-8 text-ink/75">
+            Il ne s’agit pas de tout revoir. L’objectif est de travailler ce qui est réellement attendu à l’examen, avec un plan clair centré sur ce qui vous fera vraiment progresser vers la certification.
+          </p>
+        </div>
+        <div class="surface-card relative overflow-hidden p-8 pt-20 sm:p-10 sm:pt-[5.25rem]">
+          <div class="absolute inset-x-0 top-0 h-16 bg-gradient-to-r from-accent/10 via-gold/10 to-transparent sm:h-[4.5rem]"></div>
+          <div class="absolute inset-x-8 top-0 flex h-16 items-center justify-between gap-6 sm:inset-x-10 sm:h-[4.5rem]">
+            <div class="inline-flex rounded-full bg-ink px-4 py-2 text-sm font-bold text-white">
+              Programme Objectif B2 personnalisé
+            </div>
+            <img
+              src="/images/brand/target-arrow.svg"
+              alt=""
+              class="hidden h-20 w-20 shrink-0 md:block"
+            />
           </div>
-        ))}
+          <div class="relative space-y-6">
+            <div class="space-y-4">
+              {[
+                ["1. Diagnostic initial", "Il permet d’évaluer votre niveau de départ, votre échéance et les compétences à renforcer en priorité."],
+                ["2. Plan personnalisé", "Vous savez exactement quoi travailler, dans quel ordre, et sur quoi concentrer vos efforts."],
+                ["3. Entraînement ciblé", "Vous progressez à l’oral et à l’écrit avec des exercices utiles, des retours précis et des simulations."]
+              ].map(([title, text]) => (
+                <div class="border-b border-line/80 pb-4 last:border-b-0 last:pb-0">
+                  <h3 class="text-2xl">{title}</h3>
+                  <p class="mt-2 leading-7 text-ink/75">{text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section-gap">
-    <div class="container-shell grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
-      <div class="space-y-5">
-        <p class="eyebrow">Préparation B2/C1</p>
-        <h2 class="text-4xl">Programme Objectif B2 avec plan de préparation personnalisé</h2>
-        <p class="max-w-2xl text-lg leading-8 text-ink/75">
-          Un accompagnement structuré pour travailler ce qui compte vraiment, avec une progression plus claire et moins de dispersion.
-        </p>
-        <ul class="space-y-4 leading-7 text-ink/75">
-          <li class="flex items-start gap-3">
-            <span class="mt-2 h-2.5 w-2.5 rounded-full bg-accent"></span>
-            <span>Préparation centrée sur les thèmes qui font vraiment gagner des points.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="mt-2 h-2.5 w-2.5 rounded-full bg-sun"></span>
-            <span>Accompagnement adapté à une date d’examen ou un objectif universitaire.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="mt-2 h-2.5 w-2.5 rounded-full bg-ink"></span>
-            <span>Approche simple à suivre même si vous manquez de temps.</span>
-          </li>
-        </ul>
-        <a href="/cours/espagnol-certification" class="btn-primary">Découvrir la préparation B2/C1</a>
-      </div>
-      <NewsletterForm compact={true} />
     </div>
   </section>
 
@@ -110,7 +98,10 @@ const testimonials = sortTestimonials(
     <div class="container-shell">
       <div class="mb-8 space-y-3">
         <p class="eyebrow">Témoignages</p>
-        <h2 class="text-4xl">Des étudiants qui voulaient un cadre clair et un résultat concret</h2>
+        <h2 class="text-4xl">Une préparation mieux structurée, un travail plus pertinent</h2>
+        <p class="max-w-3xl text-lg leading-8 text-ink/75">
+          Quand on sait quoi travailler et comment progresser, la préparation devient plus sereine et plus efficace.
+        </p>
       </div>
       <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {testimonials.map((entry) => <TestimonialCard {...entry.data} />)}
@@ -118,12 +109,35 @@ const testimonials = sortTestimonials(
     </div>
   </section>
 
+  <section class="section-gap bg-white/50">
+    <div class="container-shell">
+      <div class="grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+        <div class="space-y-5">
+          <p class="eyebrow">Guide gratuit</p>
+          <h2 class="text-4xl">Télécharger le guide gratuit pour réussir le B2 espagnol</h2>
+          <p class="max-w-2xl text-lg leading-8 text-ink/75">
+            Un guide simple pour comprendre les priorités, éviter les erreurs fréquentes et commencer votre préparation avec plus de clarté.
+          </p>
+        </div>
+        <NewsletterForm
+          compact={true}
+          title="Recevez le guide gratuit pour réussir le B2 espagnol"
+          description="Un guide simple pour savoir quoi travailler, dans quel ordre et avec quels critères."
+          source="homepage"
+        />
+      </div>
+    </div>
+  </section>
+
   <section class="section-gap bg-white/40">
     <div class="container-shell">
       <div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-        <div class="space-y-2">
+        <div class="max-w-3xl space-y-2">
           <p class="eyebrow">Blog</p>
-          <h2 class="text-4xl">Des contenus utiles pour comprendre l’examen et mieux progresser</h2>
+          <h2 class="text-4xl">Des articles pour mieux préparer l’examen et progresser plus vite</h2>
+          <p class="text-lg leading-8 text-ink/75">
+            Retrouvez des contenus utiles sur la certification, la méthode, l’oral, l’écrit et les points de langue qui bloquent souvent le passage à B2.
+          </p>
         </div>
         <a href="/blog" class="btn-secondary">Voir tous les articles</a>
       </div>
