@@ -66,6 +66,24 @@
     @apply prose prose-slate max-w-none prose-headings:font-display prose-headings:text-ink prose-a:text-accent prose-strong:text-ink;
   }
 
+  .prose-brand table {
+    @apply w-full border-collapse text-sm;
+  }
+
+  .prose-brand thead th {
+    @apply bg-ink/5;
+  }
+
+  .prose-brand th,
+  .prose-brand td {
+    @apply border border-line px-4 py-3 align-middle;
+  }
+
+  .prose-brand th[align="center"],
+  .prose-brand td[align="center"] {
+    @apply text-center;
+  }
+
   .brand-ring {
     background:
       radial-gradient(circle at center, rgba(241, 196, 15, 0.85) 0 18%, rgba(230, 57, 70, 0.95) 18% 36%, rgba(255, 255, 255, 1) 36% 54%, rgba(29, 53, 87, 1) 54% 68%, transparent 68%);
