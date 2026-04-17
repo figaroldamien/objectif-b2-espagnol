@@ -71,10 +71,14 @@ import { siteConfig } from "@/lib/site";
               method="POST"
               class="mt-6 grid gap-4"
             >
-            <input type="hidden" name="_subject" value="Nouveau message - page contact" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_next" value={`${siteConfig.siteUrl}${siteConfig.contactThankYouPath}`} />
+            <input
+              type="text"
+              name="company"
+              class="hidden"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+            />
 
             <input
               type="text"
