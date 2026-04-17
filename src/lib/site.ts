@@ -8,8 +8,8 @@ export const siteConfig = {
   email: "contact@objectif-b2-espagnol.fr",
   leadMagnetLandingPath: "/ressources/guide-b2",
   leadMagnetPdfPath: "/pdf/guide%20B2%20espagnol.pdf",
-  newsletterFormAction: "https://formsubmit.co/contact@objectif-b2-espagnol.fr",
-  contactFormAction: "https://formsubmit.co/contact@objectif-b2-espagnol.fr",
+  newsletterFormAction: "/api/lead",
+  contactFormAction: "/api/contact",
   leadMagnetThankYouPath: "/merci/guide-b2",
   contactThankYouPath: "/merci/contact",
   social: {

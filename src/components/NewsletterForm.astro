@@ -29,15 +29,15 @@ const {
     method="POST"
     class="relative mt-6 grid gap-3 sm:grid-cols-[1fr_auto]"
   >
-    <input type="hidden" name="_subject" value={`Nouvelle demande de guide B2 - ${source}`} />
-    <input
-      type="hidden"
-      name="_next"
-      value={`${siteConfig.siteUrl}${siteConfig.leadMagnetThankYouPath}`}
-    />
-    <input type="hidden" name="_captcha" value="false" />
-    <input type="hidden" name="_template" value="table" />
     <input type="hidden" name="source" value={source} />
+    <input
+      type="text"
+      name="company"
+      class="hidden"
+      tabindex="-1"
+      autocomplete="off"
+      aria-hidden="true"
+    />
     <input
       type="email"
       name="email"
@@ -54,7 +54,7 @@ const {
   {
     !compact && (
       <p class="mt-3 text-xs leading-6 text-ink/55">
-        Le formulaire est configuré pour un flux simple compatible site statique. Première étape à faire en production : valider l’adresse sur FormSubmit lors du premier envoi.
+        Votre email sert uniquement à vous envoyer les ressources demandées et à vous répondre si nécessaire.
       </p>
     )
   }
