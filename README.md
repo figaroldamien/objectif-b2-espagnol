@@ -40,6 +40,17 @@ npm run dev
 
 Puis ouvrir `http://localhost:4321`.
 
+## Analytics
+
+Le site utilise `Vercel Web Analytics` via le composant officiel `@vercel/analytics/astro`.
+
+Pour activer le suivi :
+
+- activer `Analytics` dans le tableau de bord du projet Vercel ;
+- deployer la branche sur Vercel ;
+- verifier dans l onglet Analytics que les pages du blog `/blog/*` remontent bien ;
+- connecter Google Search Console pour connaitre les requetes qui amenent du trafic organique.
+
 ## Points a brancher ensuite
 
 - Le vrai fournisseur email sur `NewsletterForm`
