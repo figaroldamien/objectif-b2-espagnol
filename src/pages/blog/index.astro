@@ -7,6 +7,50 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { sortBlogPosts } from "@/lib/content";
 
 const posts = sortBlogPosts(await getCollection("blog", ({ data }) => !data.draft));
+
+const themeOrder = [
+  {
+    name: "Certifications espagnol",
+    id: "certifications-espagnol",
+    description: "Comparer les certifications et comprendre laquelle correspond le mieux à votre projet.",
+    slugs: ["dele-ou-siele"]
+  },
+  {
+    name: "Déroulement du DELE B2",
+    id: "deroulement-dele-b2",
+    description: "Comprendre les épreuves, les critères de correction et le fonctionnement concret de l’examen.",
+    slugs: [
+      "structure-dele-b2",
+      "criteres-correction-ecrit-dele-b2",
+      "criteres-correction-oral-dele-b2"
+    ]
+  },
+  {
+    name: "Méthode et progression",
+    id: "methode-et-progression",
+    description: "Mieux organiser votre travail, progresser plus vite et structurer votre préparation.",
+    slugs: ["reussir-dele-b2", "passer-de-b1-a-b2", "oral-espagnol-b2"]
+  },
+  {
+    name: "Grammaire utile",
+    id: "grammaire-utile",
+    description: "Revoir les points de langue qui font vraiment la différence à l’examen.",
+    slugs: []
+  },
+  {
+    name: "Sujets corrigés",
+    id: "sujets-corriges",
+    description: "Travailler à partir de sujets fréquents et d’exemples analysés pour comprendre ce qui est attendu.",
+    slugs: ["sujet-dele-b2-sciences-technologies-medias", "exemples-sujets-dele-b2"]
+  }
+] as const;
+
+const themes = themeOrder.map((theme) => ({
+  ...theme,
+  posts: theme.slugs
+    .map((slug) => posts.find((post) => post.slug === slug))
+    .filter((post): post is typeof posts[number] => Boolean(post))
+}));
 ---
 
 <BaseLayout
@@ -35,9 +79,60 @@ const posts = sortBlogPosts(await getCollection("blog", ({ data }) => !data.draf
 
   <section class="section-gap pt-2">
     <div class="container-shell">
+      <div class="mb-8 max-w-4xl space-y-3">
+          <p class="eyebrow">Explorer par thème</p>
+          <h2 class="text-4xl">Choisissez le bon angle selon votre besoin du moment</h2>
+          <p class="text-lg leading-8 text-ink/75">
+            Vous pouvez parcourir les contenus par grands repères éditoriaux : certifications, déroulement du DELE,
+            méthode de progression, grammaire utile et sujets corrigés.
+          </p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        {themes.map((theme) => (
+          <a
+            href={`#${theme.id}`}
+            class="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-2 text-sm font-bold text-ink hover:border-ink hover:bg-ink hover:text-white"
+          >
+            <span>{theme.name}</span>
+            <span class="rounded-full bg-ink/6 px-2 py-0.5 text-xs text-ink/70">{theme.posts.length}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-gap pt-2">
+    <div class="container-shell space-y-12">
+      {themes.map((theme) => (
+        <section id={theme.id} class="scroll-mt-24">
+          <div class="mb-8 max-w-3xl space-y-3">
+            <p class="eyebrow">{theme.name}</p>
+            <h2 class="text-4xl">{theme.name}</h2>
+            <p class="text-lg leading-8 text-ink/75">{theme.description}</p>
+          </div>
+          {
+            theme.posts.length > 0 ? (
+              <div class="grid gap-6 lg:grid-cols-3">
+                {theme.posts.map((post) => <ArticleCard post={post} />)}
+              </div>
+            ) : (
+              <div class="surface-card p-7">
+                <p class="text-lg leading-8 text-ink/75">
+                  Des articles arriveront bientôt dans ce thème.
+                </p>
+              </div>
+            )
+          }
+        </section>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-gap pt-0">
+    <div class="container-shell">
       <div class="mb-8 max-w-3xl space-y-3">
-        <p class="eyebrow">À lire en priorité</p>
-        <h2 class="text-4xl">Des contenus concrets pour progresser avec méthode</h2>
+        <p class="eyebrow">Tous les articles</p>
+        <h2 class="text-4xl">L’ensemble des contenus, du plus récent au plus ancien</h2>
       </div>
       <div class="grid gap-6 lg:grid-cols-3">
         {posts.map((post) => <ArticleCard post={post} />)}
