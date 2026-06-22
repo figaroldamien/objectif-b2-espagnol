@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.objectif-b2-espagnol.fr/sitemap-index.xml
