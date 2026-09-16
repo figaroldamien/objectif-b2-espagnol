@@ -17,7 +17,7 @@ export const siteConfig = {
     instagram: "https://www.instagram.com"
   },
   navigation: [
-    { label: "Préparation B2/C1", href: "/cours/espagnol-certification" },
+    { label: "Préparation DELEB2", href: "/cours/espagnol-certification" },
     { label: "Méthode", href: "/methode" },
     { label: "Blog", href: "/blog" },
     { label: "Témoignages", href: "/temoignages" },
