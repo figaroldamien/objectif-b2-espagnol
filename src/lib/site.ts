@@ -28,7 +28,7 @@ export const siteConfig = {
 
 export const primaryCtas = {
   diagnostic: {
-    label: "Réserver un diagnostic",
+    label: "Réserver pour un bilan gratuit",
     href: "/contact"
   },
   guide: {
