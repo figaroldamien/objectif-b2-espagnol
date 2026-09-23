@@ -69,7 +69,7 @@ const schema = [
         <slot />
       </article>
 
-      <CTAInline variant={post.data.ctaVariant} />
+      <CTAInline variant={post.data.ctaVariant === "diagnostic" ? "miniTest" : post.data.ctaVariant} />
     </div>
   </section>
   <slot name="afterContent" />

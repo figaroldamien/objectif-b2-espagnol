@@ -12,6 +12,8 @@ export const siteConfig = {
   contactFormAction: "/api/contact",
   leadMagnetThankYouPath: "/merci/guide-b2",
   contactThankYouPath: "/merci/contact",
+  miniTestPath: "/mini-test-dele-b2",
+  miniTestFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfxHoZZUfn1vc2DMKW89FbuzHb1_KsGq7MgAGc3z0KNNyLt8A/viewform",
   social: {
     linkedin: "https://www.linkedin.com",
     instagram: "https://www.instagram.com"
@@ -27,6 +29,10 @@ export const siteConfig = {
 } as const;
 
 export const primaryCtas = {
+  miniTest: {
+    label: "Faire le mini-test",
+    href: siteConfig.miniTestPath
+  },
   diagnostic: {
     label: "Réserver pour un bilan gratuit",
     href: "/contact"

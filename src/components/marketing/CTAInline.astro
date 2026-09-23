@@ -10,8 +10,10 @@ type Props = {
 
 const {
   variant = "diagnostic",
-  title = variant === "guide" ? "Besoin d’un plan clair pour le B2 ?" : "Prêt à structurer votre préparation ?",
-  description = variant === "guide"
+  title = variant === "miniTest" ? "Où en êtes-vous pour le DELE B2 ?" : variant === "guide" ? "Besoin d’un plan clair pour le B2 ?" : "Prêt à structurer votre préparation ?",
+  description = variant === "miniTest"
+    ? "Faites le mini-test pour commencer à situer votre niveau et préparer la suite de votre apprentissage."
+    : variant === "guide"
     ? "Téléchargez le guide gratuit pour savoir quoi travailler avant l’examen."
     : "Réservez un diagnostic pour repartir avec une stratégie adaptée à votre niveau et votre échéance."
 } = Astro.props;

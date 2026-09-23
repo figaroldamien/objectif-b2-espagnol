@@ -21,7 +21,7 @@ const blog = defineCollection({
     seoTitle: z.string().optional(),
     seoDescription: z.string().optional(),
     faq: z.array(z.string()).default([]),
-    ctaVariant: z.enum(["diagnostic", "guide"]).default("diagnostic"),
+    ctaVariant: z.enum(["diagnostic", "guide", "miniTest"]).default("diagnostic"),
     heroImage: z.string().optional()
   })
 });

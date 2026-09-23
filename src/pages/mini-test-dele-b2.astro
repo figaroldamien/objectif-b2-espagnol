@@ -1,0 +1,74 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { siteConfig } from "@/lib/site";
+import { breadcrumbSchema } from "@/lib/schema";
+
+const formUrl: string = siteConfig.miniTestFormUrl;
+const embedUrl = formUrl ? new URL(formUrl) : null;
+embedUrl?.searchParams.set("embedded", "true");
+---
+
+<BaseLayout
+  title="Mini-test DELE B2 : faites le point sur votre espagnol"
+  description="Faites le mini-test DELE B2 directement sur cette page pour commencer à situer votre niveau d’espagnol et orienter votre préparation."
+  pathname={siteConfig.miniTestPath}
+  schema={breadcrumbSchema([
+    { name: "Accueil", url: `${siteConfig.siteUrl}/` },
+    { name: "Mini-test DELE B2", url: `${siteConfig.siteUrl}${siteConfig.miniTestPath}` }
+  ])}
+>
+  <section class="section-gap">
+    <div class="container-shell max-w-4xl">
+      <header class="space-y-5 pb-8 sm:pb-10">
+        <p class="eyebrow">Faites le point sur votre espagnol</p>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl">Mini-test DELE B2</h1>
+        <p class="max-w-3xl text-lg leading-8 text-ink/75">
+          Vous préparez le DELE B2 ? Prenez un moment pour répondre au questionnaire
+          ci-dessous et commencer à situer votre niveau.
+        </p>
+        <p class="leading-7 text-ink/75">
+          Installez-vous au calme et répondez sans dictionnaire ni outil de traduction,
+          pour que vos réponses reflètent au mieux vos connaissances actuelles.
+          Ce mini-test est un premier repère et ne remplace pas l’examen officiel.
+        </p>
+      </header>
+
+      <section aria-labelledby="questionnaire-title" class="surface-card overflow-hidden">
+        <div class="border-b border-line p-5 sm:p-8">
+          <h2 id="questionnaire-title" class="text-2xl">À vous de jouer</h2>
+          <p class="mt-2 leading-7 text-ink/75">Suivez les consignes du questionnaire et envoyez vos réponses à la fin.</p>
+        </div>
+        {embedUrl ? (
+          <>
+            <iframe
+              src={embedUrl.toString()}
+              title="Questionnaire du mini-test DELE B2"
+              class="block h-[1200px] w-full border-0 sm:h-[1100px]"
+            >
+              Chargement du mini-test…
+            </iframe>
+            <p class="border-t border-line p-5 text-sm leading-6 text-ink/75 sm:px-8">
+              Le formulaire ne s’affiche pas correctement ?{" "}
+              <a href={formUrl} target="_blank" rel="noopener noreferrer" class="font-bold text-accent underline underline-offset-4">
+                Ouvrir le mini-test dans Google Forms (nouvel onglet)
+              </a>.
+            </p>
+          </>
+        ) : (
+          <p class="p-5 leading-7 text-ink/75 sm:p-8">
+            Le mini-test sera bientôt disponible sur cette page.
+          </p>
+        )}
+      </section>
+
+      <aside class="mt-8 space-y-3 px-1">
+        <h2 class="text-2xl">Envie d’aller plus loin ?</h2>
+        <p class="leading-7 text-ink/75">
+          Un entretien individuel permet de faire le point sur vos difficultés et vos objectifs
+          pour construire une préparation adaptée.
+        </p>
+        <a href="/contact" class="btn-secondary">Demander un bilan personnalisé</a>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
