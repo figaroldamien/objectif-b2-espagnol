@@ -34,7 +34,7 @@ export const primaryCtas = {
     href: siteConfig.miniTestPath
   },
   diagnostic: {
-    label: "Réserver pour un bilan gratuit",
+    label: "Réserver mon bilan gratuit",
     href: "/contact"
   },
   guide: {

@@ -6,7 +6,7 @@ const pathname = Astro.url.pathname;
 
 <header class="sticky top-0 z-40 border-b border-line/80 bg-sand/90 backdrop-blur">
   <div class="container-shell flex items-center justify-between gap-4 py-4">
-    <a href="/" class="flex items-center gap-3">
+    <a href="/" class="flex shrink-0 items-center gap-3">
       <img
         src="/images/brand/logo-objectif-b2-espagnol.svg"
         alt="Objectif B2 Espagnol"
@@ -30,7 +30,7 @@ const pathname = Astro.url.pathname;
       }
     </nav>
 
-    <a href={primaryCtas.diagnostic.href} class="btn-primary hidden sm:inline-flex">
+    <a href={primaryCtas.diagnostic.href} class="btn-primary px-3 text-center text-xs sm:px-6 sm:text-sm">
       {primaryCtas.diagnostic.label}
     </a>
   </div>
