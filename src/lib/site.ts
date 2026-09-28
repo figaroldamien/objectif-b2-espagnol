@@ -10,6 +10,9 @@ export const siteConfig = {
   leadMagnetPdfPath: "/pdf/guide%20B2%20espagnol.pdf",
   newsletterFormAction: "/api/lead",
   contactFormAction: "/api/contact",
+  bilanPath: "/bilan-gratuit",
+  bookingUrl: "https://calendly.com/profenatiespanol",
+  diagnosticFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdCpz0y7zN7B3WWfYrg7GtCQsQ2lsCkkQyns_sTMl6rACfXMg/viewform?usp=dialog",
   leadMagnetThankYouPath: "/merci/guide-b2",
   contactThankYouPath: "/merci/contact",
   miniTestPath: "/mini-test-dele-b2",
@@ -35,7 +38,7 @@ export const primaryCtas = {
   },
   diagnostic: {
     label: "Réserver mon bilan gratuit",
-    href: "/contact"
+    href: siteConfig.bilanPath
   },
   guide: {
     label: "Télécharger le guide gratuit",

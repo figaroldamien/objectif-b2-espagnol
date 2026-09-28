@@ -1,0 +1,75 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { siteConfig } from "@/lib/site";
+---
+
+<BaseLayout
+  title="Réserver mon bilan gratuit | Objectif B2 Espagnol"
+  description="Réservez un bilan gratuit de 15 minutes en visioconférence pour faire le point sur votre préparation au DELE B2, votre niveau et vos objectifs."
+  pathname={siteConfig.bilanPath}
+>
+  <section class="section-gap">
+    <div class="container-shell max-w-5xl">
+      <div class="max-w-3xl space-y-5">
+        <p class="eyebrow">Votre bilan gratuit</p>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl">Faisons le point sur votre préparation au DELE B2</h1>
+        <p class="text-lg leading-8 text-ink/75">
+          Vous envisagez de passer le DELE B2 et vous aimeriez savoir où vous en êtes ?
+        </p>
+        <p class="text-lg leading-8 text-ink/75">Je vous propose un <strong>bilan gratuit de 15 minutes en visioconférence</strong> pour échanger sur votre niveau, votre objectif et les difficultés que vous rencontrez actuellement.</p>
+        <p class="leading-8 text-ink/75">Nous pourrons faire le point sur votre situation, répondre à vos questions et identifier les aspects de votre préparation qui méritent le plus votre attention.</p>
+      </div>
+
+      <div class="mt-12 space-y-12">
+        <section aria-labelledby="rendez-vous-title" class="surface-card overflow-hidden">
+          <div class="p-6 sm:p-8">
+            <h2 id="rendez-vous-title" class="text-3xl">Réservez votre bilan gratuit</h2>
+            <p class="mt-4 leading-7 text-ink/75">Choisissez simplement le créneau qui vous convient.</p>
+          </div>
+          <iframe src={siteConfig.bookingUrl} title="Calendrier de réservation du bilan gratuit avec Profe Nati" class="block h-[800px] w-full border-0 sm:h-[750px]" loading="lazy"></iframe>
+          <p class="px-6 pb-6 text-sm leading-6 text-ink/60 sm:px-8">Si le calendrier ne s’affiche pas, <a href={siteConfig.bookingUrl} target="_blank" rel="noopener noreferrer" class="font-bold text-accent underline">ouvrez-le dans un nouvel onglet</a>.</p>
+        </section>
+
+        <section aria-labelledby="preparation-title" class="max-w-3xl space-y-4">
+          <h2 id="preparation-title" class="text-3xl">Pour préparer notre échange</h2>
+          <p class="leading-8 text-ink/75">Après votre réservation, vous recevrez également un diagnostic en ligne qui me permettra de mieux connaître votre niveau avant notre rendez-vous.</p>
+          <p class="leading-8 text-ink/75"><strong>Il n’est pas obligatoire de tout compléter.</strong> Vous pouvez faire l’ensemble du diagnostic, seulement certaines parties ou ne pas le faire si vous manquez de temps. Plus j’aurai d’informations avant notre échange, plus je pourrai personnaliser mon retour.</p>
+          <a href={siteConfig.diagnosticFormUrl} class="btn-primary" target="_blank" rel="noopener noreferrer">Faire le diagnostic en ligne</a>
+          <p class="text-sm text-ink/60">Le formulaire s’ouvre dans un nouvel onglet.</p>
+        </section>
+
+        <section aria-labelledby="mini-test-title" class="surface-card space-y-5 p-6 sm:p-8">
+          <h2 id="mini-test-title" class="text-3xl">Vous préférez commencer par quelque chose de plus rapide ?</h2>
+          <p class="leading-7 text-ink/75">Vous n’êtes pas encore prêt(e) à réserver un entretien ?</p>
+          <p class="leading-8 text-ink/75">Faites le <strong>mini-test DELE B2 de 5 minutes</strong> pour obtenir une première indication et découvrir les points qui méritent votre attention.</p>
+          <a href={siteConfig.miniTestPath} class="btn-primary">Faire le mini-test DELE B2</a>
+        </section>
+
+        <section id="message-bilan" aria-labelledby="message-title" class="surface-card scroll-mt-48 p-6 sm:p-8">
+          <h2 id="message-title" class="text-3xl">Une question avant de réserver ?</h2>
+          <p class="mt-4 leading-8 text-ink/75">Vous pouvez bien sûr me contacter directement à <a href={`mailto:${siteConfig.email}`} class="break-words font-bold text-accent">{siteConfig.email}</a>. Je vous répondrai sous 24 à 48 heures ouvrées.</p>
+          <h3 class="mt-8 text-2xl">Laisser un message</h3>
+          <form action={siteConfig.contactFormAction} method="POST" class="mt-6 grid gap-5">
+            <input type="hidden" name="source" value="bilan-gratuit" />
+            <input type="text" name="company" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <div class="grid gap-2">
+              <label for="bilan-name" class="text-sm font-bold">Votre prénom</label>
+              <input id="bilan-name" type="text" name="name" autocomplete="given-name" required class="min-w-0 rounded-2xl border border-line bg-sand px-5 py-3 outline-none focus:border-accent" />
+            </div>
+            <div class="grid gap-2">
+              <label for="bilan-email" class="text-sm font-bold">Votre email</label>
+              <input id="bilan-email" type="email" name="email" autocomplete="email" required class="min-w-0 rounded-2xl border border-line bg-sand px-5 py-3 outline-none focus:border-accent" />
+            </div>
+            <div class="grid gap-2">
+              <label for="bilan-message" class="text-sm font-bold">Votre message</label>
+              <textarea id="bilan-message" name="message" rows="6" required placeholder="Votre niveau, votre objectif, vos questions et vos disponibilités si vous souhaitez un rendez-vous…" class="min-w-0 rounded-2xl border border-line bg-sand px-5 py-4 outline-none placeholder:text-ink/50 focus:border-accent"></textarea>
+            </div>
+            <p class="text-sm leading-6 text-ink/60">Vos informations servent à répondre à votre demande. Consultez notre <a href="/legal/confidentialite" class="underline">politique de confidentialité</a>.</p>
+            <button type="submit" class="btn-primary justify-self-start">Envoyer mon message</button>
+            <p class="text-sm leading-6 text-ink/60">L’envoi du message ne confirme pas de rendez-vous. Nous conviendrons du créneau par email.</p>
+          </form>
+        </section>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

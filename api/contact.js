@@ -17,9 +17,12 @@ export default async function handler(req, res) {
 
   try {
     const data = await parseRequestBody(req);
+    const isBilan = data.source === "bilan-gratuit";
+    const thankYouPath = isBilan ? "/merci/bilan-gratuit" : "/merci/contact";
+    const subject = isBilan ? "Nouveau message - bilan gratuit" : "Nouveau message - page contact";
 
     if (hasHoneypotValue(data)) {
-      redirect(res, "/merci/contact");
+      redirect(res, thankYouPath);
       return;
     }
 
@@ -38,10 +41,10 @@ export default async function handler(req, res) {
     }
 
     await sendEmail({
-      subject: "Nouveau message - page contact",
+      subject,
       replyTo: email,
       text: [
-        "Nouveau message depuis le site Objectif B2 Espagnol.",
+        subject,
         "",
         `Prénom : ${name}`,
         `Email : ${email}`,
@@ -50,7 +53,7 @@ export default async function handler(req, res) {
         message
       ].join("\n"),
       html: `
-        <h1>Nouveau message - page contact</h1>
+        <h1>${subject}</h1>
         <p><strong>Prénom :</strong> ${escapeHtml(name)}</p>
         <p><strong>Email :</strong> ${escapeHtml(email)}</p>
         <p><strong>Message :</strong></p>
@@ -58,7 +61,7 @@ export default async function handler(req, res) {
       `
     });
 
-    redirect(res, "/merci/contact");
+    redirect(res, thankYouPath);
   } catch (error) {
     console.error(error);
     res.statusCode = 500;
