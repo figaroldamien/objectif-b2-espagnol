@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import portrait from "@/assets/portrait-professeure.png";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import CTAFooter from "@/components/marketing/CTAFooter.astro";
 import { breadcrumbSchema, personSchema } from "@/lib/schema";
@@ -22,6 +24,16 @@ import { breadcrumbSchema, personSchema } from "@/lib/schema";
         <div class="surface-card relative overflow-hidden p-8">
           <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-r from-accent/10 via-gold/10 to-transparent"></div>
           <div class="relative">
+            <Image
+              src={portrait}
+              alt="Portrait de la professeure d’espagnol, fondatrice d’Objectif B2 Espagnol"
+              widths={[240, 480, 720]}
+              sizes="(max-width: 359px) 100vw, 240px"
+              width={240}
+              format="webp"
+              loading="eager"
+              class="mx-auto mb-8 h-auto w-full max-w-[240px] rounded-2xl"
+            />
             <h1 class="text-4xl">Une approche structurée, claire et rassurante</h1>
             <p class="mt-4 leading-7 text-ink/75">
               Professeure d’espagnol langue étrangère certifiée par l’Instituto Cervantes et examinatrice officielle du DELE B1-B2, j’enseigne l’espagnol en ligne depuis 2020.
