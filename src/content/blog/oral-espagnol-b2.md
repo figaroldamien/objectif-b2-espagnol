@@ -16,7 +16,6 @@ seoDescription: "Comment préparer l’oral espagnol B2 avec une méthode claire
 faq:
   - Comment progresser à l’oral en espagnol ?
 ctaVariant: guide
-heroImage: /images/blog/oral-espagnol-b2.svg
 ---
 
 Vous avez des idées, vous connaissez du vocabulaire, mais au moment de parler espagnol, les mots ne viennent pas toujours. Vous cherchez vos phrases, vous répétez les mêmes connecteurs et vous avez parfois envie de tout rédiger pour vous rassurer.
@@ -47,12 +46,7 @@ Vous passez ainsi de la compréhension à la production orale. Le but est de vou
 
 Connaître le mot vivienda est utile. Savoir utiliser tener dificultades para acceder a una vivienda vous permet déjà de construire une partie de votre discours.
 
-Lorsque vous préparez un thème, notez donc des groupes de mots que vous pourrez réemployer :
-
-- *compaginar los estudios con el trabajo* ;
-- *tener un impacto en el medio ambiente* ;
-- *fomentar el uso del transporte público* ;
-- *encontrar un equilibrio entre… y…*.
+Lorsque vous préparez un thème, notez donc des groupes de mots que vous pourrez réemployer : *compaginar los estudios con el trabajo* ; *tener un impacto en el medio ambiente* ; *fomentar el uso del transporte público* ; *encontrar un equilibrio entre… y…*.
 
 Faites ensuite une phrase personnelle avec chaque expression. Une expression devient plus facile à retrouver à l’oral lorsque vous l’avez déjà utilisée dans plusieurs contextes.
 
@@ -66,12 +60,7 @@ Pour les tâches que vous pouvez préparer, notamment les tâches 1 et 2 du DELE
 
 Évitez de rédiger intégralement votre intervention : vous risquez ensuite de chercher la phrase exacte que vous aviez écrite. Préparez plutôt un schéma avec des mots-clés.
 
-Votre plan peut contenir :
-
-- votre idée principale ;
-- deux arguments ;
-- un exemple concret ;
-- une limite ou une nuance, ou une conclusion.
+Votre plan peut contenir votre idée principale, deux arguments, un exemple concret, une limite ou une nuance, ou une conclusion.
 
 Ce squelette vous donne une direction tout en vous laissant la liberté de formuler vos phrases au moment de parler.
 
