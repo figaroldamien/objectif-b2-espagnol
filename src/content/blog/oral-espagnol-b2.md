@@ -32,13 +32,7 @@ Choisissez un extrait court sur un sujet que vous souhaitez travailler : le loge
 
 Après une première écoute pour comprendre l’essentiel, réécoutez et relevez quelques expressions utiles. Puis fermez vos notes et résumez le contenu à voix haute, avec vos propres mots.
 
-Vous pouvez vous aider de trois questions :
-
-¿Cuál es el problema principal?
-
-¿Qué opiniones se presentan?
-
-¿Qué pienso yo sobre este tema?
+Vous pouvez vous aider de trois questions : ¿Cuál es el problema principal? ¿Qué opiniones se presentan? ¿Qué pienso yo sobre este tema?
 
 Vous passez ainsi de la compréhension à la production orale. Le but est de vous approprier les idées et les expressions entendues.
 
