@@ -22,9 +22,8 @@ export const siteConfig = {
     instagram: "https://www.instagram.com"
   },
   navigation: [
+    { label: "Accueil", href: "/" },
     { label: "Préparation DELEB2", href: "/cours/espagnol-certification" },
-    { label: "Cours d’espagnol", href: "/cours/espagnol-certification" },
-    { label: "Blog", href: "/blog" },
     { label: "Témoignages", href: "/temoignages" },
     { label: "À propos", href: "/a-propos" },
     { label: "Contact", href: "/contact" }

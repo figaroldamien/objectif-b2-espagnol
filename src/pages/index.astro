@@ -2,22 +2,12 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import NewsletterForm from "@/components/NewsletterForm.astro";
-import ArticleCard from "@/components/marketing/ArticleCard.astro";
+import BlogArticleDirectory from "@/components/BlogArticleDirectory.astro";
 import { organizationSchema, personSchema } from "@/lib/schema";
 import { sortBlogPosts } from "@/lib/content";
 
 const posts = sortBlogPosts(await getCollection("blog", ({ data }) => !data.draft));
-const essentialSlugs = ["structure-dele-b2", "avez-vous-le-niveau-dele-b2", "reussir-dele-b2"];
-const essentials = essentialSlugs.flatMap((slug) => {
-  const post = posts.find((entry) => entry.slug === slug);
-  return post ? [post] : [];
-});
-const latestPosts = posts.filter((post) => !essentialSlugs.includes(post.slug)).slice(0, 6);
-const paths = [
-  { number: "01", title: "Comprendre l’examen", description: "Découvrez les épreuves du DELE B2, leur déroulement et les critères de correction.", href: "/blog#deroulement-dele-b2", label: "Découvrir les épreuves" },
-  { number: "02", title: "Progresser en espagnol", description: "Travaillez votre méthode, votre expression orale et les points de grammaire utiles au niveau B2.", href: "/blog#methode-et-progression", label: "Structurer ma progression" },
-  { number: "03", title: "S’entraîner avec des sujets", description: "Passez à la pratique avec des sujets corrigés et des exemples pour comprendre ce qui est attendu.", href: "/blog#sujets-corriges", label: "Explorer les sujets corrigés" }
-];
+
 ---
 
 <BaseLayout
@@ -35,47 +25,11 @@ const paths = [
         <p class="max-w-3xl text-lg leading-8 text-ink/75">Je suis professeure d’espagnol et examinatrice officielle du DELE B1-B2. Je partage ici des ressources pour vous aider à mieux comprendre la langue, organiser votre travail et avancer avec confiance.</p>
         <p class="text-lg font-bold leading-8">Besoin d’être accompagné ? <a href="/cours/espagnol-certification" class="text-accent underline underline-offset-4 hover:text-ink">Découvrez les cours d’espagnol.</a></p>
       </div>
-      <div class="mt-12 grid gap-5 lg:grid-cols-3">
-        {paths.map((path) => (
-          <a href={path.href} class="surface-card group flex flex-col p-7 hover:border-accent">
-            <span class="mb-5 text-sm font-bold tracking-widest text-accent">{path.number}</span>
-            <h2 class="text-2xl">{path.title}</h2>
-            <p class="mb-6 mt-3 leading-7 text-ink/75">{path.description}</p>
-            <span class="mt-auto text-sm font-bold text-accent">{path.label} <span aria-hidden="true">→</span></span>
-          </a>
-        ))}
-      </div>
+
     </div>
   </section>
 
-  <section id="par-ou-commencer" class="section-gap scroll-mt-36 bg-white/50">
-    <div class="container-shell">
-      <div class="mb-8 max-w-3xl space-y-3">
-        <p class="eyebrow">Les essentiels</p>
-        <h2 class="text-3xl sm:text-4xl">Votre point de départ pour le DELE B2</h2>
-        <p class="text-lg leading-8 text-ink/75">Comprendre l’examen, situer votre niveau, puis organiser votre préparation : trois lectures pour partir sur de bonnes bases.</p>
-      </div>
-      <div class="grid gap-6 lg:grid-cols-3">
-        {essentials.map((post) => <ArticleCard post={post} />)}
-      </div>
-    </div>
-  </section>
-
-  <section class="section-gap">
-    <div class="container-shell">
-      <div class="mb-8 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
-        <div class="max-w-2xl space-y-3">
-          <p class="eyebrow">À lire aussi</p>
-          <h2 class="text-3xl sm:text-4xl">Les derniers articles</h2>
-          <p class="text-lg leading-8 text-ink/75">Poursuivez votre préparation avec les dernières publications du blog.</p>
-        </div>
-        <a href="/blog" class="btn-secondary shrink-0 self-start">Tous les articles <span class="ml-2" aria-hidden="true">→</span></a>
-      </div>
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {latestPosts.map((post) => <ArticleCard post={post} />)}
-      </div>
-    </div>
-  </section>
+  <BlogArticleDirectory posts={posts} />
 
   <section class="section-gap bg-white/50">
     <div class="container-shell">

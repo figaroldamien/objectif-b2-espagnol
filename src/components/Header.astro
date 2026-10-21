@@ -38,12 +38,7 @@ const pathname = Astro.url.pathname;
   <div class="border-t border-line/70 bg-white/70 lg:hidden">
     <div class="container-shell flex gap-5 overflow-x-auto py-3 text-sm font-bold text-ink/75">
       {
-        [
-          { label: "Préparation DELEB2", href: "/cours/espagnol-certification" },
-          { label: "Cours d’espagnol", href: "/cours/espagnol-certification" },
-          { label: "Blog", href: "/blog" },
-          { label: "Contact", href: "/contact" }
-        ].map((item) => (
+        siteConfig.navigation.map((item) => (
           <a
             href={item.href}
             class:list={["whitespace-nowrap hover:text-accent", pathname === item.href && "text-accent"]}
