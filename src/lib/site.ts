@@ -24,6 +24,7 @@ export const siteConfig = {
   navigation: [
     { label: "Accueil", href: "/" },
     { label: "Préparation DELEB2", href: "/cours/espagnol-certification" },
+    { label: "Mini-test gratuit", href: "/mini-test-dele-b2" },
     { label: "Témoignages", href: "/temoignages" },
     { label: "À propos", href: "/a-propos" },
     { label: "Contact", href: "/contact" }

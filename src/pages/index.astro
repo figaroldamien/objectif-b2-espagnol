@@ -5,6 +5,7 @@ import NewsletterForm from "@/components/NewsletterForm.astro";
 import BlogArticleDirectory from "@/components/BlogArticleDirectory.astro";
 import { organizationSchema, personSchema } from "@/lib/schema";
 import { sortBlogPosts } from "@/lib/content";
+import { siteConfig } from "@/lib/site";
 
 const posts = sortBlogPosts(await getCollection("blog", ({ data }) => !data.draft));
 
@@ -26,6 +27,32 @@ const posts = sortBlogPosts(await getCollection("blog", ({ data }) => !data.draf
         <p class="text-lg font-bold leading-8">Besoin d’être accompagné ? <a href="/cours/espagnol-certification" class="text-accent underline underline-offset-4 hover:text-ink">Découvrez les cours d’espagnol.</a></p>
       </div>
 
+    </div>
+  </section>
+
+  <section aria-labelledby="mini-test-title" class="pb-16 sm:pb-20">
+    <div class="container-shell">
+      <div class="relative overflow-hidden rounded-[28px] border border-[#e8cd73] bg-[#fff4ce] p-7 shadow-card sm:p-10 lg:p-12">
+        <div aria-hidden="true" class="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full border-[32px] border-white/40"></div>
+        <div class="relative grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+          <div class="space-y-4">
+            <p class="inline-flex rounded-full bg-white/80 px-3 py-1 text-xs font-bold uppercase tracking-widest text-ink">Mini-test gratuit</p>
+            <h2 id="mini-test-title" class="max-w-xl text-3xl leading-tight sm:text-4xl">Avez-vous le niveau B2 en espagnol ?</h2>
+            <p class="max-w-xl text-lg leading-8 text-ink/80">Faites le point sur vos connaissances et obtenez un premier repère pour orienter votre préparation au DELE B2.</p>
+          </div>
+          <div class="space-y-5 lg:justify-self-end">
+            <ul class="flex flex-wrap gap-x-5 gap-y-2 text-sm font-bold text-ink">
+              <li>10 questions</li>
+              <li>5 minutes</li>
+              <li>Résultat immédiat</li>
+            </ul>
+            <a href={siteConfig.miniTestPath} class="btn-primary w-full gap-3 py-4 text-base sm:w-auto">
+              Tester mon niveau gratuitement <span aria-hidden="true">→</span>
+            </a>
+            <p class="text-sm leading-6 text-ink/70">Un premier repère pour savoir par où commencer.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
