@@ -1,151 +1,100 @@
----
+﻿---
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Hero from "@/components/marketing/Hero.astro";
-import CTAFooter from "@/components/marketing/CTAFooter.astro";
 import NewsletterForm from "@/components/NewsletterForm.astro";
 import ArticleCard from "@/components/marketing/ArticleCard.astro";
-import TestimonialCard from "@/components/marketing/TestimonialCard.astro";
 import { organizationSchema, personSchema } from "@/lib/schema";
-import { sortBlogPosts, sortTestimonials } from "@/lib/content";
+import { sortBlogPosts } from "@/lib/content";
 
-const featuredPosts = sortBlogPosts(
-  await getCollection("blog", ({ data }) => !data.draft && data.featured)
-).slice(0, 3);
-
-const testimonials = sortTestimonials(
-  await getCollection("testimonials", ({ data }) => data.featured)
-).slice(0, 3);
+const posts = sortBlogPosts(await getCollection("blog", ({ data }) => !data.draft));
+const essentialSlugs = ["structure-dele-b2", "avez-vous-le-niveau-dele-b2", "reussir-dele-b2"];
+const essentials = essentialSlugs.flatMap((slug) => {
+  const post = posts.find((entry) => entry.slug === slug);
+  return post ? [post] : [];
+});
+const latestPosts = posts.filter((post) => !essentialSlugs.includes(post.slug)).slice(0, 6);
+const paths = [
+  { number: "01", title: "Comprendre l’examen", description: "Découvrez les épreuves du DELE B2, leur déroulement et les critères de correction.", href: "/blog#deroulement-dele-b2", label: "Découvrir les épreuves" },
+  { number: "02", title: "Progresser en espagnol", description: "Travaillez votre méthode, votre expression orale et les points de grammaire utiles au niveau B2.", href: "/blog#methode-et-progression", label: "Structurer ma progression" },
+  { number: "03", title: "S’entraîner avec des sujets", description: "Passez à la pratique avec des sujets corrigés et des exemples pour comprendre ce qui est attendu.", href: "/blog#sujets-corriges", label: "Explorer les sujets corrigés" }
+];
 ---
 
 <BaseLayout
+  title="Blog espagnol B2 : conseils et préparation DELE | Objectif B2 Espagnol"
+  description="Préparez le DELE B2 avec des conseils de méthode, des sujets corrigés et des ressources pour progresser à l’oral comme à l’écrit en espagnol."
   pathname="/"
   schema={[organizationSchema(), personSchema()]}
 >
-  <Hero
-    title="Réussir votre certification d’espagnol B2 avec une méthode structurée et éprouvée."
-    description="Un accompagnement structuré pour les étudiants qui veulent obtenir une certification en espagnol et savoir exactement quoi travailler pour progresser sans se disperser."
-    showPanel={false}
-  />
-
-  <section class="section-gap pt-8">
+  <section class="section-gap pb-10 sm:pb-12">
     <div class="container-shell">
-      <div class="mb-8 max-w-3xl space-y-3">
-        <p class="eyebrow">Pour qui</p>
-        <h2 class="text-4xl">Cette préparation est faite pour vous si...</h2>
+      <div class="max-w-4xl space-y-6">
+        <p class="eyebrow">Le blog Objectif B2 Espagnol</p>
+        <h1 class="text-4xl leading-tight sm:text-5xl lg:text-6xl">L’espagnol, un objectif à la fois</h1>
+        <p class="max-w-3xl text-lg leading-8 text-ink/75">Conseils, exercices et méthodes pour progresser en espagnol et préparer le DELE B2, à votre rythme, avec ou sans date d’examen.</p>
+        <p class="max-w-3xl text-lg leading-8 text-ink/75">Je suis professeure d’espagnol et examinatrice officielle du DELE B1-B2. Je partage ici des ressources pour vous aider à mieux comprendre la langue, organiser votre travail et avancer avec confiance.</p>
+        <p class="text-lg font-bold leading-8">Besoin d’être accompagné ? <a href="/cours/espagnol-certification" class="text-accent underline underline-offset-4 hover:text-ink">Découvrez les cours d’espagnol.</a></p>
       </div>
-      <div class="grid gap-6 lg:grid-cols-3">
-        {[
-          ["Vous voulez obtenir une certification en espagnol", "Vous préparez un niveau B2/C1 pour un projet d’études, un dossier ou un objectif personnel précis.", "bg-accent"],
-          ["Vous ne savez pas quoi travailler en priorité", "Vous avez déjà commencé à réviser, mais vous manquez de repères clairs sur ce qui compte vraiment pour réussir.", "bg-sun"],
-          ["Vous avez besoin d’un cadre rassurant", "Vous cherchez une méthode structurée, simple à suivre et adaptée à votre niveau de départ.", "bg-ink"]
-        ].map(([title, text, tone]) => (
-          <div class="surface-card p-8">
-            <span class:list={["mb-5 block h-1.5 w-16 rounded-full", tone]}></span>
-            <h3 class="text-3xl">{title}</h3>
-            <p class="mt-4 leading-7 text-ink/75">{text}</p>
-          </div>
+      <div class="mt-12 grid gap-5 lg:grid-cols-3">
+        {paths.map((path) => (
+          <a href={path.href} class="surface-card group flex flex-col p-7 hover:border-accent">
+            <span class="mb-5 text-sm font-bold tracking-widest text-accent">{path.number}</span>
+            <h2 class="text-2xl">{path.title}</h2>
+            <p class="mb-6 mt-3 leading-7 text-ink/75">{path.description}</p>
+            <span class="mt-auto text-sm font-bold text-accent">{path.label} <span aria-hidden="true">→</span></span>
+          </a>
         ))}
       </div>
-      <p class="mt-8 max-w-3xl text-lg leading-8 text-ink/75">
-        L’objectif est d’optimiser votre effort : travailler ce qui compte vraiment, dans le bon ordre, avec un cadre clair et des repères précis.
-      </p>
     </div>
   </section>
 
-  <section class="section-gap bg-white/50">
+  <section id="par-ou-commencer" class="section-gap scroll-mt-36 bg-white/50">
     <div class="container-shell">
-      <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-        <div class="max-w-3xl space-y-4">
-          <p class="eyebrow">Programme</p>
-          <h2 class="text-4xl">Comment se passe la préparation</h2>
-          <p class="text-lg leading-8 text-ink/75">
-            Il ne s’agit pas de tout revoir. L’objectif est de travailler ce qui est réellement attendu à l’examen, avec un plan clair centré sur ce qui vous fera vraiment progresser vers la certification.
-          </p>
-        </div>
-        <div class="surface-card relative overflow-hidden p-8 pt-20 sm:p-10 sm:pt-[5.25rem]">
-          <div class="absolute inset-x-0 top-0 h-16 bg-gradient-to-r from-accent/10 via-gold/10 to-transparent sm:h-[4.5rem]"></div>
-          <div class="absolute inset-x-8 top-0 flex h-16 items-center justify-between gap-6 sm:inset-x-10 sm:h-[4.5rem]">
-            <div class="inline-flex rounded-full bg-ink px-4 py-2 text-sm font-bold text-white">
-              Programme Objectif B2 personnalisé
-            </div>
-            <img
-              src="/images/brand/target-arrow.svg"
-              alt=""
-              class="hidden h-20 w-20 shrink-0 md:block"
-            />
-          </div>
-          <div class="relative space-y-6">
-            <div class="space-y-4">
-              {[
-                ["1. Diagnostic initial", "Il permet d’évaluer votre niveau de départ, votre échéance et les compétences à renforcer en priorité."],
-                ["2. Plan personnalisé", "Vous savez exactement quoi travailler, dans quel ordre, et sur quoi concentrer vos efforts."],
-                ["3. Entraînement ciblé", "Vous progressez à l’oral et à l’écrit avec des exercices utiles, des retours précis et des simulations."]
-              ].map(([title, text]) => (
-                <div class="border-b border-line/80 pb-4 last:border-b-0 last:pb-0">
-                  <h3 class="text-2xl">{title}</h3>
-                  <p class="mt-2 leading-7 text-ink/75">{text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+      <div class="mb-8 max-w-3xl space-y-3">
+        <p class="eyebrow">Les essentiels</p>
+        <h2 class="text-3xl sm:text-4xl">Votre point de départ pour le DELE B2</h2>
+        <p class="text-lg leading-8 text-ink/75">Comprendre l’examen, situer votre niveau, puis organiser votre préparation : trois lectures pour partir sur de bonnes bases.</p>
+      </div>
+      <div class="grid gap-6 lg:grid-cols-3">
+        {essentials.map((post) => <ArticleCard post={post} />)}
       </div>
     </div>
   </section>
 
   <section class="section-gap">
     <div class="container-shell">
-      <div class="mb-8 space-y-3">
-        <p class="eyebrow">Témoignages</p>
-        <h2 class="text-4xl">Une préparation mieux structurée, un travail plus pertinent</h2>
-        <p class="max-w-3xl text-lg leading-8 text-ink/75">
-          Quand on sait quoi travailler et comment progresser, la préparation devient plus sereine et plus efficace.
-        </p>
+      <div class="mb-8 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+        <div class="max-w-2xl space-y-3">
+          <p class="eyebrow">À lire aussi</p>
+          <h2 class="text-3xl sm:text-4xl">Les derniers articles</h2>
+          <p class="text-lg leading-8 text-ink/75">Poursuivez votre préparation avec les dernières publications du blog.</p>
+        </div>
+        <a href="/blog" class="btn-secondary shrink-0 self-start">Tous les articles <span class="ml-2" aria-hidden="true">→</span></a>
       </div>
-      <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {testimonials.map((entry) => <TestimonialCard {...entry.data} />)}
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {latestPosts.map((post) => <ArticleCard post={post} />)}
       </div>
     </div>
   </section>
 
   <section class="section-gap bg-white/50">
     <div class="container-shell">
-      <div class="grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
-        <div class="space-y-5">
-          <p class="eyebrow">Guide gratuit</p>
-          <h2 class="text-4xl">Télécharger le guide gratuit pour réussir le B2 espagnol</h2>
-          <p class="max-w-2xl text-lg leading-8 text-ink/75">
-            Un guide simple pour comprendre les priorités, éviter les erreurs fréquentes et commencer votre préparation avec plus de clarté.
-          </p>
-        </div>
-        <NewsletterForm
-          compact={true}
-          title="Recevez le guide gratuit pour réussir le B2 espagnol"
-          description="Un guide simple pour savoir quoi travailler, dans quel ordre et avec quels critères."
-          source="homepage"
-        />
-      </div>
+      <NewsletterForm source="homepage" />
     </div>
   </section>
 
-  <section class="section-gap bg-white/40">
+  <section class="section-gap">
     <div class="container-shell">
-      <div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-        <div class="max-w-3xl space-y-2">
-          <p class="eyebrow">Blog</p>
-          <h2 class="text-4xl">Des articles pour mieux préparer l’examen et progresser plus vite</h2>
-          <p class="text-lg leading-8 text-ink/75">
-            Retrouvez des contenus utiles sur la certification, la méthode, l’oral, l’écrit et les points de langue qui bloquent souvent le passage à B2.
-          </p>
+      <div class="surface-card grid gap-8 p-8 sm:p-10 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+        <div class="space-y-4">
+          <p class="eyebrow">Un accompagnement personnalisé</p>
+          <h2 class="text-3xl sm:text-4xl">Besoin d’un cadre pour avancer ?</h2>
+          <p class="text-lg leading-8 text-ink/75">Un diagnostic, un plan de travail adapté et des retours précis sur vos productions pour préparer votre certification avec des priorités claires.</p>
         </div>
-        <a href="/blog" class="btn-secondary">Voir tous les articles</a>
-      </div>
-      <div class="grid gap-6 lg:grid-cols-3">
-        {featuredPosts.map((post) => <ArticleCard post={post} />)}
+        <div class="lg:justify-self-end">
+          <a href="/cours/espagnol-certification" class="btn-secondary">Découvrir la préparation DELE B2</a>
+        </div>
       </div>
     </div>
   </section>
-
-  <CTAFooter />
 </BaseLayout>

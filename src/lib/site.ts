@@ -23,7 +23,7 @@ export const siteConfig = {
   },
   navigation: [
     { label: "Préparation DELEB2", href: "/cours/espagnol-certification" },
-    { label: "Méthode", href: "/methode" },
+    { label: "Cours d’espagnol", href: "/cours/espagnol-certification" },
     { label: "Blog", href: "/blog" },
     { label: "Témoignages", href: "/temoignages" },
     { label: "À propos", href: "/a-propos" },
