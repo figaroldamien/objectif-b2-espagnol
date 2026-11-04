@@ -19,6 +19,7 @@ import { siteConfig } from "@/lib/site";
       <p class="text-sm font-bold uppercase tracking-[0.16em] text-ink/55">Navigation</p>
       <div class="flex flex-col gap-2 text-sm text-ink/75">
         {siteConfig.navigation.map((item) => <a href={item.href} class="hover:text-accent">{item.label}</a>)}
+        <a href="/contact" class="hover:text-accent">Contact</a>
       </div>
     </div>
 
