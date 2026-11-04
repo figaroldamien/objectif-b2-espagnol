@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import NewsletterForm from "@/components/NewsletterForm.astro";
 import BlogArticleDirectory from "@/components/BlogArticleDirectory.astro";
+import TestimonialsSection from "@/components/marketing/TestimonialsSection.astro";
 import { organizationSchema, personSchema } from "@/lib/schema";
 import { sortBlogPosts } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
@@ -57,6 +58,8 @@ const posts = sortBlogPosts(await getCollection("blog", ({ data }) => !data.draf
   </section>
 
   <BlogArticleDirectory posts={posts} />
+
+  <TestimonialsSection />
 
   <section class="section-gap bg-white/50">
     <div class="container-shell">

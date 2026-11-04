@@ -3,9 +3,9 @@ import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import FAQList from "@/components/FAQList.astro";
 import CTAFooter from "@/components/marketing/CTAFooter.astro";
-import TestimonialCard from "@/components/marketing/TestimonialCard.astro";
+import TestimonialsSection from "@/components/marketing/TestimonialsSection.astro";
 import { faqSchema, breadcrumbSchema } from "@/lib/schema";
-import { sortFaqs, sortTestimonials } from "@/lib/content";
+import { sortFaqs } from "@/lib/content";
 
 const faqs = sortFaqs(
   await getCollection("faqs", ({ data }) => data.category === "certification")
@@ -13,10 +13,6 @@ const faqs = sortFaqs(
   question: entry.data.question,
   answer: entry.data.answer
 }));
-
-const testimonials = sortTestimonials(
-  await getCollection("testimonials", ({ data }) => data.featured)
-).slice(0, 3);
 
 const schema = [
   breadcrumbSchema([
@@ -186,17 +182,7 @@ const schema = [
     </div>
   </section>
 
-  <section class="section-gap">
-    <div class="container-shell">
-      <div class="mb-8 space-y-3">
-        <p class="eyebrow">Témoignages</p>
-        <h2 class="text-4xl">90% de réussite et des retours très concrets</h2>
-      </div>
-      <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {testimonials.map((entry) => <TestimonialCard {...entry.data} />)}
-      </div>
-    </div>
-  </section>
+  <TestimonialsSection />
 
   <section class="section-gap">
     <div class="container-shell">

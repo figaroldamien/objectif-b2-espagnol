@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+import TestimonialCard from "./TestimonialCard.astro";
+import { sortTestimonials } from "@/lib/content";
+
+const testimonials = sortTestimonials(await getCollection("testimonials"));
+---
+
+<section id="temoignages" aria-labelledby="temoignages-title" class="section-gap">
+  <div class="container-shell">
+    <div class="mb-8 max-w-3xl space-y-3">
+      <p class="eyebrow">Témoignages</p>
+      <h2 id="temoignages-title" class="text-3xl sm:text-4xl">Des progrès concrets, une préparation plus sereine</h2>
+      <p class="text-lg leading-8 text-ink/75">Découvrez les retours des élèves accompagnés dans leur progression en espagnol et leur préparation à la certification.</p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      {testimonials.map((entry) => <TestimonialCard {...entry.data} />)}
+    </div>
+  </div>
+</section>
