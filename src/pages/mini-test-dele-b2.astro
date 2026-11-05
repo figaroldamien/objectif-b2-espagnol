@@ -69,14 +69,29 @@ embedUrl?.searchParams.set("embedded", "true");
         )}
       </section>
 
-      <aside class="mt-8 space-y-3 px-1">
-        <h2 class="text-2xl">Envie d’aller plus loin ?</h2>
-        <p class="leading-7 text-ink/75">
-          Un entretien individuel permet de faire le point sur vos difficultés et vos objectifs
-          pour construire une préparation adaptée.
+      <section aria-labelledby="apres-mini-test-title" class="surface-card mt-8 space-y-6 p-6 sm:p-8">
+        <h2 id="apres-mini-test-title" class="text-3xl">Et après le mini-test ?</h2>
+        <p class="leading-8 text-ink/75">
+          Vous souhaitez consolider votre espagnol ou préparer les épreuves du DELE B2 ? Je vous accompagne avec des cours individuels adaptés à votre niveau et à votre rythme.
         </p>
-        <a href="/contact" class="btn-secondary">Demander un bilan personnalisé</a>
-      </aside>
+        <p class="leading-8 text-ink/75">
+          <strong>Vous pouvez commencer même si vous n’avez pas encore le niveau B2 ou de date d’examen prévue.</strong>
+        </p>
+        <div class="space-y-4">
+          <h3 class="text-2xl">Cours individuels en ligne</h3>
+          <p class="leading-8 text-ink/75">
+            <strong class="text-ink">25 €</strong> le cours de 60 minutes<br />
+            <strong class="text-ink">125 €</strong> le forfait de 5 cours de 60 minutes
+          </p>
+          <a href="/tarifs" class="btn-primary">Découvrir les cours et les tarifs</a>
+        </div>
+        <p class="leading-8 text-ink/75">
+          Vous avez des questions ? <a href="/contact" class="font-bold text-accent underline underline-offset-4">Contactez-moi directement</a>.
+        </p>
+        <p class="leading-8 text-ink/75">
+          Si vous préférez en discuter avant de commencer, vous pouvez aussi réserver un <a href={siteConfig.bookingUrl} class="font-bold text-accent underline underline-offset-4">entretien découverte gratuit de 15 minutes</a>, facultatif et sans engagement.
+        </p>
+      </section>
     </div>
   </section>
 </BaseLayout>
