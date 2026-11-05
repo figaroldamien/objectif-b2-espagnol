@@ -6,6 +6,7 @@ export const siteConfig = {
     "La méthode structurée pour atteindre le niveau B2/C1 en espagnol, réussir votre certification et réserver un diagnostic personnalisé.",
   author: "Objectif B2 Espagnol",
   email: "contact@objectif-b2-espagnol.fr",
+  whatsappUrl: "https://wa.me/33758372353",
   leadMagnetLandingPath: "/ressources/guide-b2",
   leadMagnetPdfPath: "/pdf/guide%20B2%20espagnol.pdf",
   newsletterFormAction: "/api/lead",
