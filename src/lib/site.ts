@@ -25,6 +25,7 @@ export const siteConfig = {
     { label: "Accueil", href: "/" },
     { label: "Préparation DB2", href: "/cours/espagnol-certification" },
     { label: "Mini-test gratuit", href: "/mini-test-dele-b2" },
+    { label: "Tarifs", href: "/tarifs" },
     { label: "À propos", href: "/a-propos" }
   ]
 } as const;
