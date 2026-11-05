@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { siteConfig } from "@/lib/site";
 import FAQList from "@/components/FAQList.astro";
 import CTAFooter from "@/components/marketing/CTAFooter.astro";
 import TestimonialsSection from "@/components/marketing/TestimonialsSection.astro";
@@ -178,6 +179,26 @@ const schema = [
             </li>
           ))}
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="cours-tarifs-title" class="section-gap">
+    <div class="container-shell">
+      <div class="surface-card max-w-4xl space-y-6 p-6 sm:p-8">
+        <h2 id="cours-tarifs-title" class="text-4xl">Cours et tarifs</h2>
+        <p class="leading-8 text-ink/75">
+          Que vous souhaitiez consolider votre espagnol pour atteindre le niveau B2 ou préparer les épreuves du DELE, les cours s’adaptent à votre niveau, à votre rythme et à votre objectif.
+        </p>
+        <p class="leading-8 text-ink/75"><strong>Cours individuels en ligne de 60 minutes :</strong></p>
+        <ul class="list-disc space-y-3 pl-6 leading-8 text-ink/75">
+          <li><strong class="text-ink">25 €</strong> le cours à l’unité.</li>
+          <li><strong class="text-ink">125 €</strong> le forfait de cinq cours, pour organiser un travail suivi autour de vos priorités.</li>
+        </ul>
+        <a href="/tarifs" class="btn-primary">Découvrir les formules et les tarifs</a>
+        <p class="leading-8 text-ink/75">
+          Vous souhaitez en parler ? <a href="/contact" class="font-bold text-accent underline underline-offset-4">Contactez-moi directement</a> ou choisissez un <a href={siteConfig.bookingUrl} class="font-bold text-accent underline underline-offset-4">entretien découverte gratuit de 15 minutes</a>, facultatif et sans engagement.
+        </p>
       </div>
     </div>
   </section>
